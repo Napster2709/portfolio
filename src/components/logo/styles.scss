@@ -1,0 +1,12 @@
+@import 'styles/common.scss';
+
+.logo {
+  fill: $grey;
+  transition: fill 0.5s ease;
+}
+
+[data-theme='light'] {
+  .logo {
+    fill: $dark;
+  }
+}

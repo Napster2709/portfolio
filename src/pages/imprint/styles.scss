@@ -1,0 +1,78 @@
+@import 'styles/common.scss';
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main {
+  max-width: 350px;
+  display: flex;
+  margin: 7rem auto 4rem auto;
+  flex-direction: column;
+}
+
+.iconContainer {
+  display: none;
+  border-radius: 50%;
+  box-shadow: rgb(15 17 21 / 20%) 0px 3px 6px 0px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $lightdark;
+  opacity: 0;
+  transition: background-color 0.5s ease, color 0.5s ease, opacity 0.5s ease;
+
+  @media all and (min-width: $mobile) {
+    opacity: 1;
+  }
+}
+
+.icon {
+}
+
+.box {
+  position: relative;
+  // background-color: $lightdark;
+  padding: 2rem 0;
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 80%;
+    bottom: -15px;
+    left: 80%;
+    right: -15px;
+    border-bottom-right-radius: 2rem;
+    border-right: 5px solid $blue;
+    border-bottom: 5px solid $blue;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-gap: 50px;
+  left: -90px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+[data-theme='light'] {
+  .iconContainer {
+    background-color: $white;
+  }
+}

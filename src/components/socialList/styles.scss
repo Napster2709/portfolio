@@ -1,0 +1,33 @@
+@import 'styles/common.scss';
+
+.socialList {
+  display: flex;
+  flex-direction: row;
+  > a {
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    animation: slideRight 1s ease;
+  }
+
+  .github {
+    transition: color 0.5s ease;
+    &:hover {
+      color: $github;
+    }
+  }
+
+  .xing {
+    transition: color 0.5s ease;
+    &:hover {
+      color: $xing;
+    }
+  }
+
+  .stackoverflow {
+    transition: color 0.5s ease;
+    &:hover {
+      color: $stackoverflow;
+    }
+  }
+}

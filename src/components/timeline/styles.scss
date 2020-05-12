@@ -1,0 +1,102 @@
+@import 'styles/common';
+
+$dot: 1rem;
+$line: 3px;
+
+.timeline {
+  padding-top: 3rem;
+
+  .row {
+    display: grid;
+    margin-top: 0.8rem;
+    grid-template-columns: 1fr $dot 1fr;
+    grid-template-rows: $dot 1fr;
+    row-gap: 0.8rem;
+    column-gap: 0.8rem;
+    min-height: 10rem;
+    grid-template-areas:
+      'content dot date'
+      'content line date';
+
+    .content {
+      display: flex;
+      grid-area: content;
+      padding: 0 1rem;
+      align-items: start;
+      place-content: end;
+      width: 100%;
+
+      .bubble {
+        background-color: $lightdark;
+        position: relative;
+        top: -1rem;
+        width: 100%;
+        min-height: 4rem;
+        padding: 1rem;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 1rem;
+          right: -0.6rem;
+          height: 0;
+          width: 0;
+          // background-color: $lightdark;
+          border-top: 0.6rem solid transparent;
+          border-bottom: 0.6rem solid transparent;
+
+          border-left: 0.6rem solid $lightdark;
+        }
+      }
+    }
+
+    .dot {
+      grid-area: dot;
+      background-color: $lightwhite;
+      border-radius: 50%;
+      box-shadow: rgb(15 17 21 / 20%) 0px 3px 6px 0px;
+    }
+
+    .line {
+      grid-area: line;
+      place-self: center;
+      width: $line;
+      height: 100%;
+      background-color: $red;
+    }
+
+    .dot {
+      grid-area: dot;
+    }
+
+    .date {
+      grid-area: date;
+      place-self: start left;
+    }
+
+    &:nth-child(even) {
+      grid-template-areas:
+        'date dot content'
+        'date line content';
+
+      .content {
+        text-align: left;
+        place-content: start;
+
+        .bubble::after {
+          right: inherit;
+          left: -0.6rem;
+          border-top: 0.6rem solid transparent;
+          border-bottom: 0.6rem solid transparent;
+          border-left: inherit;
+          border-right: 0.6rem solid $lightdark;
+        }
+      }
+
+      .date {
+        place-self: start right;
+      }
+    }
+  }
+}

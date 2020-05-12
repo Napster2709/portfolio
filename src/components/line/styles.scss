@@ -1,0 +1,50 @@
+@import 'styles/common.scss';
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  // transition: transform 0.5s ease;
+
+  &.vertical {
+    .line {
+      background-color: $red;
+      height: 150px;
+      width: 3px;
+    }
+  }
+
+  &.center {
+    @media all and (min-width: $mobile) {
+      justify-content: center;
+    }
+  }
+
+  &.left {
+    justify-content: flex-start;
+  }
+
+  &.right {
+    @media all and (min-width: $mobile) {
+      justify-content: flex-end;
+    }
+  }
+  .line {
+    background-color: $red;
+    height: 3px;
+    width: 150px;
+  }
+
+  .svgLine {
+    stroke: $red;
+    height: 110pt;
+    stroke-width: 8px;
+
+    // @media all and (max-width: $mobile) {
+    //   path {
+    //     d: path(
+    //       'M 252 43.5 Q 221.333 16.5 185.333 16.5 C 149.333 16.5 104.906 43.5 66 43.5 Q 33.333 43.5 6 24.5'
+    //     );
+    //   }
+    // }
+  }
+}

@@ -1,0 +1,54 @@
+@import 'styles/common.scss';
+
+.cup {
+  fill: none;
+}
+
+.code {
+  // transform: scale(0.4);
+  #line1 {
+    fill: $red;
+  }
+  #line2 {
+    fill: $blue;
+  }
+  #line3_1 {
+    fill: $red;
+  }
+  #line3_2 {
+    fill: $green;
+  }
+  #line4 {
+    fill: $green;
+  }
+  #line5 {
+    fill: $blue;
+  }
+  #line6 {
+    fill: $red;
+  }
+  #line7 {
+    fill: $blue;
+  }
+  #line8_1 {
+    fill: $green;
+  }
+  #line8_2 {
+    fill: $blue;
+  }
+  #line9_1 {
+    fill: $red;
+  }
+  #line9_2 {
+    fill: $green;
+  }
+  #line9_3 {
+    fill: $blue;
+  }
+  #line10_1 {
+    fill: $green;
+  }
+  #line10_2 {
+    fill: $red;
+  }
+}

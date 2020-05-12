@@ -1,11 +1,19 @@
 @import './animation.scss';
+@import './animation.scss';
+@import './shared.classes.scss';
+@import './mixings.scss';
 
 // Colors
-$dark: rgb(45, 46, 45);
-$grey: #c5c6c7;
+// $dark: rgb(45, 46, 45);
+$dark: #2e3440;
+$lightdark: #3b4252;
+$grey: #d8dee9;
+$red: #df6a41;
+$green: #4b9669;
+$blue: #49c6c6;
+$lightwhite: #e5e9f0;
 $white: #fff;
-$lightwhite: #f8f8f8;
-$red: #ff7777;
+$black: #000;
 
 $success: #42ff4b;
 $error: #ff4242;
@@ -14,5 +22,11 @@ $error: #ff4242;
 $sidebarWidth: 80px;
 
 // breakpoints
+$tablet: 1024px;
 $mobile: 768px;
 $smallPhone: 500px;
+
+// brand colors
+$stackoverflow: #ef8236;
+$xing: #126567;
+$github: #7dbbe6;

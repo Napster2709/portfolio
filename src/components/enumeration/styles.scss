@@ -1,0 +1,21 @@
+@import 'styles/common.scss';
+
+.container {
+  height: 2.5rem;
+  overflow: hidden;
+
+  .itemBox {
+    display: flex;
+    flex-direction: column;
+    // transition: transform 0.5s cubic-bezier(0.78, 0.2, 0.15, 1.01);
+  }
+
+  .item {
+    font-size: 1.5rem;
+    color: $red;
+
+    &:nth-child(even) {
+      color: $blue;
+    }
+  }
+}

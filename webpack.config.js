@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
@@ -11,7 +13,6 @@ module.exports = [
   {
     mode: env || 'development',
     target: 'web',
-    node: { fs: 'empty' },
     entry: './src/index.tsx',
     devtool: 'source-map',
     resolve: {
@@ -90,6 +91,18 @@ module.exports = [
             },
           ],
         },
+        {
+          test: /\.(jpg|png)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]',
+                outputPath: 'assets/',
+              },
+            },
+          ],
+        },
       ],
     },
     plugins: [
@@ -97,8 +110,10 @@ module.exports = [
         template: path.resolve(__dirname, 'src', 'index.html'),
       }),
       new MiniCssExtractPlugin({
-        filename: env === 'development' ? '[name].css' : '[name].[hash].css',
-        chunkFilename: env === 'development' ? '[id].css' : '[id].[hash].css',
+        filename:
+          env === 'development' ? '[name].css' : '[name].[fullhash].css',
+        chunkFilename:
+          env === 'development' ? '[id].css' : '[id].[fullhash].css',
       }),
       new webpack.DefinePlugin({
         'process.env': JSON.stringify(dotenv.parsed),
@@ -111,19 +126,20 @@ module.exports = [
     output: {
       path: path.resolve(__dirname, 'dist'),
       pathinfo: true,
-      filename: 'static/js/bundle.js',
+      filename: 'static/js/[name].bundle.js',
       chunkFilename: 'static/js/[name].chunk.js',
-      // publicPath: '/',
     },
     devServer: {
-      contentBase: path.join(__dirname, 'dist'),
-      clientLogLevel: 'info',
+      client: {
+        overlay: true,
+        progress: true,
+      },
+      static: {
+        directory: path.join(__dirname, 'dist'),
+      },
       compress: true,
       port: 8080,
-      watchContentBase: true,
-      overlay: true,
       historyApiFallback: true,
-      open: true,
     },
   },
 ];

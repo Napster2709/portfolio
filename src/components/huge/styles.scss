@@ -3,38 +3,45 @@
 .hugeFont {
   color: $grey;
   position: relative;
-  font-size: 10rem;
+  font-size: 5rem;
+  transition: color 0.5s ease;
 
-  &:after {
-    display: block;
-    position: absolute;
-    content: '';
-    right: -15px;
-    top: 15px;
-    bottom: 15px;
-    width: 5px;
-    background-color: #fff;
-    animation: typeing 1s ease infinite;
-  }
+  // &:after {
+  //   display: block;
+  //   position: absolute;
+  //   content: '';
+  //   right: -15px;
+  //   top: 15px;
+  //   bottom: 15px;
+  //   width: 5px;
+  //   background-color: #fff;
+  //   animation: typeing 1s ease infinite;
+  // }
 }
 
-@media all and (max-width: $smallPhone) {
+[data-theme='light'] {
   .hugeFont {
-    transform: rotate(-90deg);
+    color: $dark;
   }
 }
 
-@keyframes typeing {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+// @media all and (max-width: $smallPhone) {
+//   .hugeFont {
+//     transform: rotate(-90deg);
+//   }
+// }
+
+// @keyframes typeing {
+//   0% {
+//     opacity: 0;
+//   }
+//   30% {
+//     opacity: 1;
+//   }
+//   70% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }

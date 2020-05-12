@@ -1,0 +1,56 @@
+// Shared classes
+
+// Animations
+.slideRight {
+  animation: slideRight 1s ease;
+}
+
+.slideLeft {
+  animation: slideLeft 1s ease;
+}
+
+.slideUp {
+  animation: slideUp 1s ease;
+}
+
+.slideDown {
+  animation: slideDown 1s ease;
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease;
+}
+
+// Utility
+.centered {
+  display: grid;
+  place-items: center;
+}
+
+.alignSelf {
+  align-self: center;
+}
+
+.height100 {
+  height: 100%;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+.callForAction {
+  cursor: pointer;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.main {
+  grid-area: main;
+}
+
+.header {
+  grid-area: header;
+}

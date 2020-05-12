@@ -1,0 +1,53 @@
+@import 'styles/common';
+
+.main {
+  margin-top: 5rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  & > div {
+    padding: 0.5rem 0.3rem;
+    max-width: 300px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > div {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
+.black {
+  background-color: $black;
+}
+.dark {
+  background-color: $dark;
+}
+.lightdark {
+  background-color: $lightdark;
+}
+.lightwhite {
+  background-color: $lightwhite;
+}
+.white {
+  background-color: $white;
+}
+.red {
+  background-color: $red;
+}
+.blue {
+  background-color: $blue;
+}
+.success {
+  background-color: $success;
+}
+.error {
+  background-color: $error;
+}

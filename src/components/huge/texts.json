@@ -1,0 +1,22 @@
+{
+  "textArray": [
+    {
+      "key": "where",
+      "value": ["Here", "Where do you think?", "Foolish question!"]
+    },
+    {
+      "key": "why",
+      "value": ["Why not...."]
+    },
+    {
+      "key": "who",
+      "value": ["You will see"]
+    },
+    {
+      "key": "why me",
+      "value": [
+        "you visited this side. Not the other way around. Don't be silly!"
+      ]
+    }
+  ]
+}
