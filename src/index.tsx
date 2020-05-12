@@ -1,14 +1,22 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Hello } from './components';
+import { Home, PageNotFound } from './pages';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import * as styles from 'styles/app.scss';
 import './theme/global';
-// declare let module: any;
 
 ReactDOM.render(
-  <Hello compiler="Typescript" framework="React..." bundler="Webpack" />,
+  <Router>
+    <div className={styles.app}>
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+        <Route path="*">
+          <PageNotFound />
+        </Route>
+      </Switch>
+    </div>
+  </Router>,
   document.getElementById('root'),
 );
-
-// if (module.hot) {
-//   module.hot.accept();
-// }

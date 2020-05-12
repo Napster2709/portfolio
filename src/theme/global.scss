@@ -1,3 +1,19 @@
+@import 'styles/common.scss';
+
 body {
-  background-color: #212121;
+  font-family: 'Nunito', sans-serif;
+  color: $white;
+  background-color: $dark;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: $dark;
+    background-color: $white;
+  }
 }
