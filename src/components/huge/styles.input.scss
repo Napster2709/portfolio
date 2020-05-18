@@ -1,0 +1,11 @@
+@import 'styles/common.scss';
+
+.hugeInput {
+  color: $grey;
+  font-size: 10rem;
+  text-align: center;
+  outline: none;
+  background: none;
+  border: none;
+  max-width: 100%;
+}

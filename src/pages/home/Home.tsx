@@ -1,13 +1,14 @@
-import * as React from 'react';
-import * as styles from './styles.scss';
-import { Huge } from 'components';
+import React from 'react';
+import styles from './styles.scss';
+import { Huge, HugeInput } from 'components';
 
 const Home = () => {
   const text = 'SOON';
 
   return (
     <div className={styles.fullpage}>
-      <Huge>{text}</Huge>
+      {/* <Huge>{text}</Huge> */}
+      <HugeInput value="SOON" />
     </div>
   );
 };
