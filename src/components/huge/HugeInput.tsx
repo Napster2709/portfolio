@@ -1,7 +1,8 @@
 import React, { useState, createRef, useEffect } from 'react';
 import styles from './styles.input.scss';
 import { sleep } from 'utils';
-import { nextTick } from 'process';
+import { TextInput } from '../textInput';
+import textJson from './texts.json';
 
 interface HugeInputProps {
   value: string | number | string[];
@@ -10,6 +11,11 @@ interface HugeInputProps {
 interface TextMatch {
   oldValue: string;
   newValue: string;
+}
+
+interface TextArrayItems {
+  key: string;
+  value: string[];
 }
 
 const HugeInput = ({ value }: HugeInputProps) => {
@@ -32,15 +38,22 @@ const HugeInput = ({ value }: HugeInputProps) => {
     string: string,
     callback: (text: TextMatch) => void,
   ) => {
-    if (string.toLowerCase().includes('where')) {
-      callback({ oldValue: string, newValue: 'something' });
-    }
+    (textJson.textArray as TextArrayItems[]).forEach((item: TextArrayItems) => {
+      if (string.toLowerCase().includes(item.key)) {
+        callback({
+          oldValue: string,
+          newValue: item.value[Math.floor(Math.random() * item.value.length)],
+        });
+      }
+    });
   };
 
   const typeingAnimation = async (match: TextMatch) => {
     await clearWriting(match.oldValue);
     await writeText(match.newValue);
     activeInput();
+    // await sleep(5000);
+    // setInputValue(value);
   };
 
   const writeText = async (text: string) => {
@@ -81,12 +94,11 @@ const HugeInput = ({ value }: HugeInputProps) => {
   };
 
   return (
-    <input
-      ref={inputRef}
+    <TextInput
+      inputRef={inputRef}
       className={styles.hugeInput}
       value={inputValue}
       onChange={changeHandler}
-      spellCheck={false}
       disabled={disabled}
     />
   );

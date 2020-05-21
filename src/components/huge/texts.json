@@ -1,0 +1,16 @@
+{
+  "textArray": [
+    {
+      "key": "where",
+      "value": ["Here", "Where do you think", "Foolish question"]
+    },
+    {
+      "key": "why",
+      "value": ["Why not...."]
+    },
+    {
+      "key": "who",
+      "value": ["You will see"]
+    }
+  ]
+}

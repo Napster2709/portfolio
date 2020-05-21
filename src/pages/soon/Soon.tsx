@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './styles.scss';
-import { Huge, HugeInput } from 'components';
+import { HugeInput } from 'components';
 
-const Home = () => {
+const Soon = () => {
   const text = 'SOON';
 
   return (
@@ -12,4 +12,4 @@ const Home = () => {
   );
 };
 
-export { Home };
+export { Soon };
