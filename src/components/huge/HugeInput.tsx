@@ -20,6 +20,7 @@ interface TextArrayItems {
 
 const HugeInput = ({ value }: HugeInputProps) => {
   const [inputValue, setInputValue] = useState(value);
+  const [ownEntry, setOwnEntry] = useState<boolean>(true);
   const [disabled, setDisabled] = useState<boolean>(false);
   const inputRef = createRef<HTMLInputElement>();
 
@@ -49,6 +50,7 @@ const HugeInput = ({ value }: HugeInputProps) => {
   };
 
   const typeingAnimation = async (match: TextMatch) => {
+    setOwnEntry(false);
     await clearWriting(match.oldValue);
     await writeText(match.newValue);
     activeInput();
@@ -90,7 +92,12 @@ const HugeInput = ({ value }: HugeInputProps) => {
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
-    containString(event.target.value, typeingAnimation);
+    if (ownEntry) {
+      containString(event.target.value, typeingAnimation);
+    }
+    if (event.target.value.length < 2) {
+      setOwnEntry(true);
+    }
   };
 
   return (
