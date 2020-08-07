@@ -20,7 +20,6 @@ interface TextArrayItems {
 
 const HugeInput = ({ value }: HugeInputProps) => {
   const [inputValue, setInputValue] = useState(value);
-  const [ownEntry, setOwnEntry] = useState<boolean>(true);
   const [disabled, setDisabled] = useState<boolean>(false);
   const inputRef = createRef<HTMLInputElement>();
 
@@ -50,12 +49,9 @@ const HugeInput = ({ value }: HugeInputProps) => {
   };
 
   const typeingAnimation = async (match: TextMatch) => {
-    setOwnEntry(false);
     await clearWriting(match.oldValue);
     await writeText(match.newValue);
     activeInput();
-    // await sleep(5000);
-    // setInputValue(value);
   };
 
   const writeText = async (text: string) => {
@@ -90,14 +86,23 @@ const HugeInput = ({ value }: HugeInputProps) => {
     });
   };
 
+  /**
+   * On Input change start and reset a timeout, to change if person is still typing.
+   * If one second since last input, execute containString()
+   */
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (inputRef.current?.value) {
+        containString(inputRef.current.value, typeingAnimation);
+      }
+    }, 1000);
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [inputValue]);
+
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
-    if (ownEntry) {
-      containString(event.target.value, typeingAnimation);
-    }
-    if (event.target.value.length < 2) {
-      setOwnEntry(true);
-    }
   };
 
   return (

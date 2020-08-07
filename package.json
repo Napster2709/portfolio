@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "src/index.tsx",
   "scripts": {
     "build": "webpack --config ./webpack.config.ts",
     "serve": "webpack-dev-server"
@@ -42,7 +42,8 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.10.1",
-    "webpack-hot-middleware": "^2.25.0"
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-merge": "^5.1.1"
   },
   "dependencies": {
     "@types/classnames": "^2.2.9",
