@@ -1,6 +1,9 @@
+@import 'styles/common.scss';
+
 .fullpage {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  grid-area: main;
+  // min-height: 100vh;
 }

@@ -5,11 +5,7 @@ import { Huge, HugeInput } from 'components';
 const Home = () => {
   const text = 'SOON';
 
-  return (
-    <div className={styles.fullpage}>
-      <HugeInput value={text} />
-    </div>
-  );
+  return <div className={styles.fullpage}>Something</div>;
 };
 
 export { Home };
