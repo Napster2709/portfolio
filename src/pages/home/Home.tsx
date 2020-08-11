@@ -7,9 +7,8 @@ const Home = () => {
 
   return (
     <div className={styles.fullpage}>
-      <Huge>test</Huge>
+      <Huge>Welcome</Huge>
       <CommandLineInput />
-      <p>test</p>
     </div>
   );
 };

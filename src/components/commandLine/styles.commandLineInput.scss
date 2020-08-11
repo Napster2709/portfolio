@@ -7,7 +7,16 @@
     display: block;
     content: '~/portfolio';
     background-color: rgba(0, 0, 0, 0.1);
-    color: $red;
+    color: $blue;
+    font-weight: 600;
+    padding: 3px;
+  }
+
+  &::after {
+    display: block;
+    content: '✓';
+    background-color: rgba(0, 0, 0, 0.1);
+    color: $green;
     padding: 3px;
   }
 }
@@ -15,4 +24,5 @@
 .input {
   all: unset;
   margin-left: 5px;
+  width: 100%;
 }

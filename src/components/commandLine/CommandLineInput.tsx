@@ -4,7 +4,11 @@ import styles from './styles.commandLineInput.scss';
 const CommandLineInput = () => {
   return (
     <div className={styles.inputWrapper}>
-      <input type="text" className={styles.input} />
+      <input
+        type="text"
+        className={styles.input}
+        onSubmit={() => console.log('object')}
+      />
     </div>
   );
 };
