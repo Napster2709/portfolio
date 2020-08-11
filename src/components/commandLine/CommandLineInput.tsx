@@ -2,7 +2,11 @@ import React from 'react';
 import styles from './styles.commandLineInput.scss';
 
 const CommandLineInput = () => {
-  return <input type="text" className={styles.input} />;
+  return (
+    <div className={styles.inputWrapper}>
+      <input type="text" className={styles.input} />
+    </div>
+  );
 };
 
 export { CommandLineInput };
