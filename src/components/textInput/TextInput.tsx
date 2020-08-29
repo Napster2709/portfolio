@@ -7,7 +7,8 @@ interface TextInputProps {
   inputRef?: any;
   className?: any;
   value?: any;
-  onChange?: any;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   disabled?: boolean;
 }
 
@@ -16,6 +17,7 @@ const TextInput = ({
   className,
   value,
   onChange,
+  onKeyDown,
   disabled,
 }: TextInputProps) => {
   return (
@@ -24,6 +26,7 @@ const TextInput = ({
       className={cn(className, styles.input)}
       value={value}
       onChange={onChange}
+      onKeyDown={onKeyDown}
       spellCheck={false}
       disabled={disabled}
     />

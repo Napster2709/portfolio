@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { TextInput } from 'components';
 import styles from './styles.commandLineInput.scss';
 
 interface CommandLineInputProps {
@@ -34,9 +35,8 @@ const CommandLineInput = ({
 
   return (
     <div className={styles.inputWrapper}>
-      <input
-        ref={inputRef}
-        type="text"
+      <TextInput
+        inputRef={inputRef}
         value={inputValue}
         onChange={onChangeEvent}
         onKeyDown={onkeydownHandler}
