@@ -6,9 +6,14 @@ const Home = () => {
   const text = 'SOON';
 
   return (
-    <div className={styles.fullpage}>
-      <Huge>Welcome</Huge>
-      <CommandLineInput />
+    <div className={styles.home}>
+      <div className={styles.fadeIn}>
+        <CommandLineInput
+          initialFocus
+          submitEvent={(e) => console.log(e)}
+          value="test"
+        />
+      </div>
     </div>
   );
 };

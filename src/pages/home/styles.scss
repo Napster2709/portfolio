@@ -1,9 +1,12 @@
 @import 'styles/common.scss';
 
-.fullpage {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+.home {
   grid-area: main;
-  // min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fadeIn {
+  animation: slideUp 1s ease;
 }

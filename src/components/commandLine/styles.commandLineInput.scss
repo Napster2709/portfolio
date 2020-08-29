@@ -2,6 +2,8 @@
 
 .inputWrapper {
   display: flex;
+  padding: 3px;
+  background-color: #212121;
 
   &::before {
     display: flex;
@@ -29,4 +31,10 @@
   all: unset;
   margin-left: 5px;
   width: 100%;
+}
+
+@media all and (min-width: $mobile) {
+  .inputWrapper {
+    width: 450px;
+  }
 }
