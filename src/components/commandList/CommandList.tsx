@@ -14,8 +14,12 @@ interface CommandListProps {
 const CommandList = ({ commands }: CommandListProps) => {
   return (
     <List>
-      {commands.map((command) => (
-        <List.Item className={styles.listItem} onClick={command.action}>
+      {commands.map((command, index: number) => (
+        <List.Item
+          key={index}
+          className={styles.listItem}
+          onClick={command.action}
+        >
           {command.display}
         </List.Item>
       ))}

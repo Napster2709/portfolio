@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { TextInput } from 'components';
 import styles from './styles.commandLineInput.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import cn from 'classnames';
 
 interface CommandLineInputProps {
   submitEvent: (val: any) => void;
@@ -42,7 +45,15 @@ const CommandLineInput = ({
         onKeyDown={onkeydownHandler}
         className={styles.input}
       />
-      <div className={styles.centered}>Submit</div>
+      <div
+        onClick={() => {
+          submitEvent(inputValue);
+          setInputValue('');
+        }}
+        className={cn(styles.centered, styles.submitButton)}
+      >
+        <FontAwesomeIcon icon={faPlay} />
+      </div>
     </div>
   );
 };

@@ -2,15 +2,17 @@
 
 .container {
   grid-area: main;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.title {
+  margin-bottom: 5rem;
+  font-size: 1rem;
 }
 
 .list {

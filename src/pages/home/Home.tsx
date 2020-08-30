@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles.scss';
-import { CommandLineInput, CommandList, Command } from 'components';
+import { CommandLineInput, CommandList, Command, Huge } from 'components';
 import { writeText } from 'utils';
 import cn from 'classnames';
 
@@ -16,20 +16,29 @@ const Home = () => {
 
   useEffect(() => {
     writeText({
-      text: 'Type or click start!',
+      text: 'Type start and hit enter!',
       setNewText: (newText: string) => setTitle(newText),
       delay: 50,
     });
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={cn(styles.container, styles.centered)}>
       <div className={styles.content}>
-        <h1 className={cn(styles.fadeIn, styles.centered)}>{title}</h1>
-        <div className={cn(styles.list, styles.fadeIn)}>
+        <Huge
+          className={cn(
+            styles.fadeIn,
+            styles.centered,
+            styles.title,
+            styles.textAlignCenter,
+          )}
+        >
+          {title}
+        </Huge>
+        {/* <div className={cn(styles.list, styles.fadeIn)}>
           <CommandList commands={someActions} />
-        </div>
-        <div className={styles.fadeIn}>
+        </div> */}
+        <div className={cn(styles.fadeIn, styles.centered)}>
           <CommandLineInput
             initialFocus
             submitEvent={(e) => console.log(e)}
