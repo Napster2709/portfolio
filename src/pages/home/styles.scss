@@ -1,12 +1,18 @@
 @import 'styles/common.scss';
 
-.home {
+.container {
   grid-area: main;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.fadeIn {
-  animation: slideUp 1s ease;
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.list {
+  padding: 1rem 0;
 }

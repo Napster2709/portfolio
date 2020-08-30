@@ -1,0 +1,14 @@
+// Shared classes
+.fadeIn {
+  animation: slideUp 1s ease;
+}
+
+.slideIn {
+  animation: slideRight 1s ease;
+}
+
+.centered {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}

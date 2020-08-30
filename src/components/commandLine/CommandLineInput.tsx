@@ -42,6 +42,7 @@ const CommandLineInput = ({
         onKeyDown={onkeydownHandler}
         className={styles.input}
       />
+      <div className={styles.centered}>Submit</div>
     </div>
   );
 };

@@ -16,15 +16,15 @@
     padding: 3px;
   }
 
-  &::after {
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    content: '✓';
-    background-color: rgba(0, 0, 0, 0.1);
-    color: $green;
-    padding: 3px;
-  }
+  // &::after {
+  //   display: flex;
+  //   align-self: center;
+  //   justify-self: center;
+  //   content: '✓';
+  //   background-color: rgba(0, 0, 0, 0.1);
+  //   color: $green;
+  //   padding: 3px;
+  // }
 }
 
 .input {
