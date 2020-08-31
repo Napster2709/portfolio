@@ -3,5 +3,16 @@
 .footer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   grid-area: footer;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .text {
+    padding: 0 0.5rem;
+  }
 }
