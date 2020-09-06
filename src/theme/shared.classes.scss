@@ -9,10 +9,14 @@
 
 .centered {
   display: flex;
-  align-self: center;
+  align-items: center;
   justify-content: center;
 }
 
 .textAlignCenter {
   text-align: center;
+}
+
+.callForAction {
+  cursor: pointer;
 }

@@ -14,7 +14,7 @@ interface ListItemProps {
 }
 
 const List = ({ children, className }: ListProps) => {
-  return <ul className={cn(styles.list, className)}>{children}</ul>;
+  return <ul className={cn(className, styles.list)}>{children}</ul>;
 };
 
 List.Item = ({ children, className, onClick }: ListItemProps) => {

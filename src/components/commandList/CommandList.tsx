@@ -13,7 +13,7 @@ interface CommandListProps {
 
 const CommandList = ({ commands }: CommandListProps) => {
   return (
-    <List>
+    <List className={styles.list}>
       {commands.map((command, index: number) => (
         <List.Item
           key={index}

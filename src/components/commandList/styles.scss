@@ -1,7 +1,12 @@
 @import 'styles/common.scss';
 
+.list {
+  display: flex;
+}
+
 .listItem {
   background-color: $red;
-  color: $black;
-  padding: 0.3rem 1rem;
+  color: $white;
+  margin: 0 0.4rem;
+  padding: 0.4rem 1rem;
 }

@@ -8,16 +8,24 @@ const Home = () => {
   const [title, setTitle] = useState<string>('');
   const [activeEntrie, setActiveEntrie] = useState<string>('');
 
-  const someActions: Command[] = [
-    {
-      display: 'start',
-      action: () => undefined,
-    },
-  ];
+  // const someActions: Command[] = [
+  //   {
+  //     display: 'Timeline',
+  //     action: () => undefined,
+  //   },
+  //   {
+  //     display: 'About Me',
+  //     action: () => undefined,
+  //   },
+  //   {
+  //     display: 'Portfolio',
+  //     action: () => undefined,
+  //   },
+  // ];
 
   useEffect(() => {
     writeText({
-      text: 'Type start and hit enter!',
+      text: 'Welcome to my Portfolio!',
       setNewText: (newText: string) => setTitle(newText),
       delay: 50,
     });
@@ -44,27 +52,30 @@ const Home = () => {
               [styles.fadeAway]: activeEntrie !== '',
             },
           )}
+          onClick={() => setActiveEntrie('aboutme')}
           onAnimationEnd={onAnimationEndHandler}
         >
           {title}
         </Huge>
       </div>
-      <div className={cn(styles.subcontainer)}>
-        <div className={styles.content}>
-          {/* {activeEntrie !== '' && (
-            <div className={cn(styles.list, styles.fadeIn)}>
-              <CommandList commands={someActions} />
-            </div>
-          )} */}
+      {/* <div className={cn(styles.subcontainer)}>
+        <div className={cn(styles.content)}>
+          <div
+            className={cn(styles.list, styles.centered, {
+              [styles.visible]: activeEntrie !== '',
+            })}
+          >
+            <CommandList commands={someActions} />
+          </div>
           <div className={cn(styles.fadeIn, styles.centered)}>
             <CommandLineInput
               initialFocus
               submitEvent={setActiveEntrie}
-              value=""
+              value="start"
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

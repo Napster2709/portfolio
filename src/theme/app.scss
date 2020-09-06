@@ -2,11 +2,12 @@
 
 .app {
   display: grid;
-  grid-template-rows: 1fr 1fr 5rem;
+  grid-template-rows: 1fr 5rem;
   grid-template-areas:
     'main'
-    'submain'
     'footer';
   min-height: 100vh;
   padding: 0 1rem;
+  max-width: 1920px;
+  margin: 0 auto;
 }
