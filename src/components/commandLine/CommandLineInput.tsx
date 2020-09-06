@@ -27,8 +27,9 @@ const CommandLineInput = ({
 
   const onkeydownHandler = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
-      submitEvent(event.currentTarget.value);
-      event.currentTarget.value = null;
+      const value = event.currentTarget.value;
+      setInputValue('');
+      submitEvent(value);
     }
   };
 

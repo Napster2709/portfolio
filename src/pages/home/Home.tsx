@@ -6,6 +6,7 @@ import cn from 'classnames';
 
 const Home = () => {
   const [title, setTitle] = useState<string>('');
+  const [activeEntrie, setActiveEntrie] = useState<string>('');
 
   const someActions: Command[] = [
     {
@@ -22,31 +23,49 @@ const Home = () => {
     });
   }, []);
 
+  const onAnimationEndHandler = (
+    event: React.AnimationEvent<HTMLDivElement>,
+  ) => {
+    if (activeEntrie !== '') {
+      event.currentTarget.style.display = 'none';
+    }
+  };
+
   return (
-    <div className={cn(styles.container, styles.centered)}>
-      <div className={styles.content}>
+    <>
+      <div className={cn(styles.container, styles.centered)}>
         <Huge
           className={cn(
             styles.fadeIn,
             styles.centered,
             styles.title,
             styles.textAlignCenter,
+            {
+              [styles.fadeAway]: activeEntrie !== '',
+            },
           )}
+          onAnimationEnd={onAnimationEndHandler}
         >
           {title}
         </Huge>
-        {/* <div className={cn(styles.list, styles.fadeIn)}>
-          <CommandList commands={someActions} />
-        </div> */}
-        <div className={cn(styles.fadeIn, styles.centered)}>
-          <CommandLineInput
-            initialFocus
-            submitEvent={(e) => console.log(e)}
-            value=""
-          />
+      </div>
+      <div className={cn(styles.subcontainer)}>
+        <div className={styles.content}>
+          {/* {activeEntrie !== '' && (
+            <div className={cn(styles.list, styles.fadeIn)}>
+              <CommandList commands={someActions} />
+            </div>
+          )} */}
+          <div className={cn(styles.fadeIn, styles.centered)}>
+            <CommandLineInput
+              initialFocus
+              submitEvent={setActiveEntrie}
+              value=""
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

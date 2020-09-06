@@ -4,6 +4,10 @@
   grid-area: main;
 }
 
+.subcontainer {
+  grid-area: submain;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -11,10 +15,14 @@
 }
 
 .title {
-  margin-bottom: 5rem;
+  // margin-bottom: 5rem;
   font-size: 1rem;
 }
 
 .list {
   padding: 1rem 0;
+}
+
+.fadeAway {
+  animation: fadeOut 1s ease forwards;
 }
