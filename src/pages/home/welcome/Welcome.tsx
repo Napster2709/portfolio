@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
-import styles from './styles.scss';
+import styles from './welcome.styles.scss';
 import cn from 'classnames';
 import { Huge } from 'components';
 import { writeText } from 'utils';
-import { MainContext } from './context';
+import { MainContext } from '../context';
 
 const Welcome = () => {
   const [title, setTitle] = useState<string>('');
+  const [show, setShow] = useState<boolean>(true);
   const context = useContext(MainContext);
 
   useEffect(() => {
@@ -21,26 +22,28 @@ const Welcome = () => {
     event: React.AnimationEvent<HTMLDivElement>,
   ) => {
     if (context.currentStep !== '') {
-      event.currentTarget.style.display = 'none';
+      setShow(false);
     }
   };
 
   return (
-    <Huge
-      className={cn(
-        styles.fadeIn,
-        styles.centered,
-        styles.title,
-        styles.textAlignCenter,
-        {
-          [styles.fadeAway]: context.currentStep !== '',
-        },
-      )}
-      onClick={() => context.setCurrentStep('start')}
-      onAnimationEnd={onAnimationEndHandler}
-    >
-      {title}
-    </Huge>
+    show && (
+      <Huge
+        className={cn(
+          styles.fadeIn,
+          styles.centered,
+          styles.title,
+          styles.textAlignCenter,
+          {
+            [styles.fadeAway]: context.currentStep !== '',
+          },
+        )}
+        onClick={() => context.setCurrentStep('about')}
+        onAnimationEnd={onAnimationEndHandler}
+      >
+        {title}
+      </Huge>
+    )
   );
 };
 

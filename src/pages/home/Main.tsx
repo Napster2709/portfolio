@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styles from './styles.scss';
 import cn from 'classnames';
-import { Welcome } from './Welcome';
+import { Welcome } from './welcome';
+import { About } from './about';
 import { MainContext } from './context';
 
 const Main = () => {
@@ -13,6 +14,7 @@ const Main = () => {
     >
       <div className={cn(styles.container, styles.centered)}>
         <Welcome />
+        <About />
       </div>
     </MainContext.Provider>
   );
