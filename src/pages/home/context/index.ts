@@ -1,11 +1,16 @@
 import React from 'react';
 
-export interface MainContextItems {
+export interface MainContextState {
   currentStep: string;
-  setCurrentStep: (e: string) => void;
+  transitioning?: boolean;
+}
+
+export interface MainContextItems extends MainContextState {
+  setCurrentState: (e: MainContextState) => void;
 }
 
 export const MainContext = React.createContext<MainContextItems>({
   currentStep: '',
-  setCurrentStep: (e: string) => undefined,
+  transitioning: false,
+  setCurrentState: (e: MainContextState) => undefined,
 });

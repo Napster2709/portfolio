@@ -23,6 +23,7 @@ const Welcome = () => {
   ) => {
     if (context.currentStep !== '') {
       setShow(false);
+      context.setCurrentState({ ...context, transitioning: false });
     }
   };
 
@@ -38,7 +39,9 @@ const Welcome = () => {
             [styles.fadeAway]: context.currentStep !== '',
           },
         )}
-        onClick={() => context.setCurrentStep('about')}
+        onClick={() =>
+          context.setCurrentState({ currentStep: 'about', transitioning: true })
+        }
         onAnimationEnd={onAnimationEndHandler}
       >
         {title}

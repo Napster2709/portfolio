@@ -5,3 +5,4 @@ export * from './socialList';
 export * from './commandLine';
 export * from './commandList';
 export * from './list';
+export * from './button';

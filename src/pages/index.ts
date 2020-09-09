@@ -1,3 +1,3 @@
 export * from './home';
-export * from './noFound';
+export * from './notFound';
 export * from './soon';

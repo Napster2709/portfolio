@@ -10,7 +10,7 @@ ReactDOM.render(
   <Router>
     <div className={styles.app}>
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Main />
         </Route>
         <Route path="*">

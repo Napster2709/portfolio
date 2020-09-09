@@ -3,14 +3,20 @@ import styles from './styles.scss';
 import cn from 'classnames';
 import { Welcome } from './welcome';
 import { About } from './about';
-import { MainContext } from './context';
+import { MainContext, MainContextState } from './context';
 
 const Main = () => {
-  const [state, setstate] = useState<string>('');
+  const [state, setstate] = useState<MainContextState>({
+    currentStep: '',
+    transitioning: false,
+  });
 
   return (
     <MainContext.Provider
-      value={{ currentStep: state, setCurrentStep: (e: string) => setstate(e) }}
+      value={{
+        ...state,
+        setCurrentState: (e: MainContextState) => setstate(e),
+      }}
     >
       <div className={cn(styles.container, styles.centered)}>
         <Welcome />

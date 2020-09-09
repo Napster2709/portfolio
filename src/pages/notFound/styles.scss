@@ -1,0 +1,25 @@
+@import 'styles/common.scss';
+
+.content {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.back {
+  font-size: 1.25rem;
+  color: $grey;
+  transition: color 0.5s ease;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+.line {
+  background-color: $red;
+  height: 3px;
+  width: 150px;
+  margin: 3rem auto;
+}
