@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import styles from './welcome.styles.scss';
 import cn from 'classnames';
-import { Huge } from 'components';
+import { Huge, Logo } from 'components';
 import { writeText } from 'utils';
 import { MainContext } from '../context';
 
@@ -29,24 +29,31 @@ const Welcome = () => {
 
   return (
     show && (
-      <Huge
+      <div
         className={cn(
           styles.main,
-          styles.fadeIn,
           styles.centered,
-          styles.title,
           styles.textAlignCenter,
-          {
-            [styles.fadeAway]: context.currentStep !== '',
-          },
+          styles.content,
         )}
-        onClick={() =>
-          context.setCurrentState({ currentStep: 'about', transitioning: true })
-        }
-        onAnimationEnd={onAnimationEndHandler}
       >
-        {title}
-      </Huge>
+        <Huge
+          className={cn(styles.title, {
+            [styles.fadeAway]: context.currentStep !== '',
+          })}
+          onClick={() =>
+            context.setCurrentState({
+              currentStep: 'about',
+              transitioning: true,
+            })
+          }
+          onAnimationEnd={onAnimationEndHandler}
+        >
+          {title}
+        </Huge>
+        <div className={cn(styles.line, styles.slideRight)} />
+        <Logo className={cn(styles.logo, styles.slideDown)} />
+      </div>
     )
   );
 };

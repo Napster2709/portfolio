@@ -1,8 +1,20 @@
 @import 'styles/common.scss';
 
-.fullpage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.logo {
+  svg {
+    fill: $grey;
+    width: 80pt;
+    height: 80pt;
+  }
+}
+
+.line {
+  background-color: $red;
+  height: 3px;
+  width: 150px;
+  margin: 3rem auto;
+}
+
+.content {
+  flex-direction: column;
 }

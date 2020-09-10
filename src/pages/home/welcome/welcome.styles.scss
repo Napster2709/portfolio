@@ -7,3 +7,22 @@
 .fadeAway {
   animation: fadeOut 1s ease forwards;
 }
+
+.logo {
+  svg {
+    fill: $grey;
+    width: 80pt;
+    height: 80pt;
+  }
+}
+
+.content {
+  flex-direction: column;
+}
+
+.line {
+  background-color: $red;
+  height: 3px;
+  width: 150px;
+  margin: 3rem auto;
+}

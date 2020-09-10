@@ -1,12 +1,23 @@
 // Shared classes
-.fadeIn {
-  animation: slideUp 1s ease;
-}
 
-.slideIn {
+// Animations
+.slideRight {
   animation: slideRight 1s ease;
 }
 
+.slideLeft {
+  animation: slideLeft 1s ease;
+}
+
+.slideUp {
+  animation: slideUp 1s ease;
+}
+
+.slideDown {
+  animation: slideDown 1s ease;
+}
+
+// Utility
 .centered {
   display: flex;
   align-items: center;
