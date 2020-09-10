@@ -5,6 +5,8 @@
   align-items: center;
   justify-content: space-between;
   grid-area: footer;
+  z-index: 1;
+  backdrop-filter: blur(5px);
 }
 
 .copyright {

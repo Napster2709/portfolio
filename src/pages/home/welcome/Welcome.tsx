@@ -31,6 +31,7 @@ const Welcome = () => {
     show && (
       <Huge
         className={cn(
+          styles.main,
           styles.fadeIn,
           styles.centered,
           styles.title,

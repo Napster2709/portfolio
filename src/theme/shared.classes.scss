@@ -20,3 +20,14 @@
 .callForAction {
   cursor: pointer;
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// Main grid area
+.main {
+  grid-area: main;
+  place-self: center;
+  padding: 0 1rem;
+}

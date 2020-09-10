@@ -18,10 +18,8 @@ const Main = () => {
         setCurrentState: (e: MainContextState) => setstate(e),
       }}
     >
-      <div className={cn(styles.container, styles.centered)}>
-        <Welcome />
-        <About />
-      </div>
+      <Welcome />
+      <About />
     </MainContext.Provider>
   );
 };

@@ -4,10 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
-  background-color: $black;
   animation: flyIn 1s ease;
+}
+
+.container {
 }
 
 @keyframes flyIn {
