@@ -52,7 +52,7 @@ const Welcome = () => {
           {title}
         </Huge>
         <div className={cn(styles.line, styles.slideRight)} />
-        <Logo className={cn(styles.logo, styles.slideDown)} />
+        <Logo className={styles.logo} />
       </div>
     )
   );
