@@ -31,7 +31,7 @@ const Welcome = () => {
     show && (
       <div
         className={cn(
-          styles.main,
+          styles.fullpage,
           styles.centered,
           styles.textAlignCenter,
           styles.content,
