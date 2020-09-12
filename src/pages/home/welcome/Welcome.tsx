@@ -31,7 +31,7 @@ const Welcome = () => {
     show && (
       <div
         className={cn(
-          styles.fullpage,
+          styles.main,
           styles.centered,
           styles.textAlignCenter,
           styles.content,
@@ -51,7 +51,7 @@ const Welcome = () => {
         >
           {title}
         </Huge>
-        <div className={cn(styles.line, styles.slideRight)} />
+        <div className={cn(styles.line, styles.slideDown)} />
         <Logo className={styles.logo} />
       </div>
     )
