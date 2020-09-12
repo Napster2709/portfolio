@@ -32,23 +32,24 @@ const Welcome = () => {
     context.currentStep === steps.welcome && (
       <div
         className={cn(
-          styles.main,
+          styles.fullwidth,
           styles.centered,
           styles.textAlignCenter,
           styles.content,
+          {
+            [styles.fadeAway]: context.transitioning,
+          },
         )}
+        onAnimationEnd={onAnimationEndHandler}
       >
         <Huge
-          className={cn(styles.title, {
-            [styles.fadeAway]: context.transitioning,
-          })}
+          className={cn(styles.title)}
           onClick={() =>
             context.setCurrentState({
               ...context,
               transitioning: true,
             })
           }
-          onAnimationEnd={onAnimationEndHandler}
         >
           {title}
         </Huge>

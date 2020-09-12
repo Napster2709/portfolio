@@ -10,4 +10,9 @@
   grid-area: logo;
   display: flex;
   align-items: center;
+
+  svg {
+    height: 100%;
+    width: auto;
+  }
 }

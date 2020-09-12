@@ -2,8 +2,8 @@
 
 .about {
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
   animation: flyIn 1s ease;
 }
 

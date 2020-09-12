@@ -5,7 +5,7 @@ import styles from './styles.scss';
 const Header = () => {
   return (
     <>
-      <Logo />
+      <Logo className={styles.logo} />
       <div className={styles.header}>im header</div>
     </>
   );

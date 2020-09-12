@@ -18,14 +18,14 @@ const Soon = () => {
   return (
     <div
       className={cn(
-        styles.main,
+        styles.fullwidth,
         styles.centered,
         styles.textAlignCenter,
         styles.content,
       )}
     >
       <Huge className={cn(styles.title)}>{title}</Huge>
-      <div className={cn(styles.line, styles.slideRight)} />
+      <div className={cn(styles.line, styles.slideDown)} />
       <Logo className={cn(styles.logo, styles.slideDown)} />
     </div>
   );

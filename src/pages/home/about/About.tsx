@@ -7,16 +7,18 @@ import { Header } from 'components';
 const About = () => {
   const context = useContext(MainContext);
   return (
-    context.currentStep === steps.about &&
-    !context.transitioning && (
+    context.currentStep === steps.about && (
       <>
         <Header />
         <div
-          className={cn(styles.main, styles.container, {
+          className={cn(styles.side, styles.container, {
             [styles['overflow-hidden']]: context.transitioning,
           })}
         >
           <div className={styles.about}>
+            <div className={styles.title}>
+              Hi i'm Frederik R. von Kiedrowski
+            </div>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
               distinctio sapiente possimus esse eius voluptates rerum optio

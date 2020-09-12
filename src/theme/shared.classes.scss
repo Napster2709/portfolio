@@ -42,3 +42,15 @@
   place-self: center;
   padding: 0 1rem;
 }
+
+.side {
+  grid-area: side;
+  place-self: center;
+  padding: 0 1rem;
+}
+
+.fullwidth {
+  grid-area: side / side / main / main;
+  place-self: center;
+  padding: 0 1rem;
+}
