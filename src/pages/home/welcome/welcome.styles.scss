@@ -10,9 +10,6 @@
 
 .logo {
   svg {
-    fill: $grey;
-    width: 80pt;
-    height: 80pt;
     :nth-child(1) {
       animation: slideUp 1s ease;
     }

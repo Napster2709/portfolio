@@ -7,3 +7,4 @@ export * from './commandList';
 export * from './list';
 export * from './button';
 export * from './logo';
+export * from './header';

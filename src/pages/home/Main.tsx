@@ -3,11 +3,11 @@ import styles from './styles.scss';
 import cn from 'classnames';
 import { Welcome } from './welcome';
 import { About } from './about';
-import { MainContext, MainContextState } from './context';
+import { MainContext, MainContextState, steps } from './context';
 
 const Main = () => {
   const [state, setstate] = useState<MainContextState>({
-    currentStep: '',
+    currentStep: steps.about,
     transitioning: false,
   });
 

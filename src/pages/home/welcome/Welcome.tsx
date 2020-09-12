@@ -3,11 +3,10 @@ import styles from './welcome.styles.scss';
 import cn from 'classnames';
 import { Huge, Logo } from 'components';
 import { writeText } from 'utils';
-import { MainContext } from '../context';
+import { MainContext, steps } from '../context';
 
 const Welcome = () => {
   const [title, setTitle] = useState<string>('');
-  const [show, setShow] = useState<boolean>(true);
   const context = useContext(MainContext);
 
   useEffect(() => {
@@ -21,14 +20,16 @@ const Welcome = () => {
   const onAnimationEndHandler = (
     event: React.AnimationEvent<HTMLDivElement>,
   ) => {
-    if (context.currentStep !== '') {
-      setShow(false);
-      context.setCurrentState({ ...context, transitioning: false });
+    if (context.transitioning) {
+      context.setCurrentState({
+        currentStep: steps.about,
+        transitioning: false,
+      });
     }
   };
 
   return (
-    show && (
+    context.currentStep === steps.welcome && (
       <div
         className={cn(
           styles.main,
@@ -39,11 +40,11 @@ const Welcome = () => {
       >
         <Huge
           className={cn(styles.title, {
-            [styles.fadeAway]: context.currentStep !== '',
+            [styles.fadeAway]: context.transitioning,
           })}
           onClick={() =>
             context.setCurrentState({
-              currentStep: 'about',
+              ...context,
               transitioning: true,
             })
           }

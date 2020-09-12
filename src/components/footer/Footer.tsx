@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.scss';
 import { SocialList } from 'components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCopyright } from '@fortawesome/free-regular-svg-icons';
+import { faCopyright } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
   return (

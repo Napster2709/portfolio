@@ -1,7 +1,12 @@
 import React from 'react';
 
+export enum steps {
+  'welcome',
+  'about',
+}
+
 export interface MainContextState {
-  currentStep: string;
+  currentStep: steps;
   transitioning?: boolean;
 }
 
@@ -10,7 +15,7 @@ export interface MainContextItems extends MainContextState {
 }
 
 export const MainContext = React.createContext<MainContextItems>({
-  currentStep: '',
+  currentStep: steps.about,
   transitioning: false,
   setCurrentState: (e: MainContextState) => undefined,
 });
