@@ -9,9 +9,9 @@ const Soon = () => {
 
   useEffect(() => {
     writeText({
-      text: 'Soon...',
+      text: 'Soon',
       setNewText: (newText: string) => setTitle(newText),
-      delay: 800,
+      delay: 200,
     });
   }, []);
 
@@ -24,9 +24,9 @@ const Soon = () => {
         styles.content,
       )}
     >
-      <Huge className={cn(styles.title)}>{title}</Huge>
+      <Logo className={cn(styles.logo)} />
       <div className={cn(styles.line, styles.slideDown)} />
-      <Logo className={cn(styles.logo, styles.slideDown)} />
+      <Huge className={cn(styles.title, styles.slideUp)}>{title}</Huge>
     </div>
   );
 };

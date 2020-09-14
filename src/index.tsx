@@ -12,10 +12,8 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/">
           <Main />
+          {/* <Soon /> */}
         </Route>
-        {/* <Route exact path="/">
-          <Soon />
-        </Route> */}
         <Route path="*">
           <PageNotFound />
         </Route>

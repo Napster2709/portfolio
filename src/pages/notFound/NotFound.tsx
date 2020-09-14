@@ -6,7 +6,14 @@ import cn from 'classnames';
 
 const PageNotFound = () => {
   return (
-    <div className={cn(styles.centered, styles.content)}>
+    <div
+      className={cn(
+        styles.fullwidth,
+        styles.centered,
+        styles.textAlignCenter,
+        styles.content,
+      )}
+    >
       <Huge>Page not found</Huge>
       <div className={styles.line} />
       <Link to="/">
