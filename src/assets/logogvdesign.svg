@@ -1,1 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Generator: Gravit.io --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 150 150" width="150pt" height="150pt"><defs><clipPath id="_clipPath_23oCy2Jndg4eg2Om57gTHj5BTQjTNEkf"><rect width="150" height="150"/></clipPath></defs><g clip-path="url(#_clipPath_23oCy2Jndg4eg2Om57gTHj5BTQjTNEkf)"><path d=" M 52.188 82 L 71.313 111.5 L 85.313 111.5 L 85.313 92.25 L 75.313 83.25 L 75.313 99.5 L 63.656 82 L 52.188 82 Z " fill="rgb(0,0,0)"/><path d=" M 75.313 79.563 L 85.043 88.738 L 110.75 111.5 L 125.688 111.5 L 89.313 76.5 L 125.688 38.5 L 110.594 38.5 L 85.078 65.5 L 85.313 38.5 L 75.313 38.5 L 75.313 79.563 Z " fill="rgb(0,0,0)"/><path d=" M 24.313 111.5 L 24.313 70.5 L 24.313 70.5 L 56.906 70.5 L 63.313 79.563 L 34.313 79.563 L 34.563 111.5 L 24.313 111.5 Z " fill="rgb(0,0,0)"/><path d=" M 24.313 67.313 L 24.313 38.5 L 24.313 38.5 L 63.906 38.5 L 63.656 47.5 L 34.563 47.5 L 34.563 67.313 L 24.313 67.313 Z " fill="rgb(0,0,0)"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Generator: Gravit.io -->
+<svg xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 150 110" width="150pt" height="110pt">
+  <defs>
+    <clipPath id="_clipPath_kyqAsD4jG1aq5XrdAkV1ccEeEpmq3pVZ">
+      <rect width="150" height="110"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#_clipPath_kyqAsD4jG1aq5XrdAkV1ccEeEpmq3pVZ)">
+    <path d=" M 41.253 65.357 L 69.549 109.004 L 90.263 109.004 L 90.263 80.522 L 75.467 67.206 L 75.467 91.249 L 58.221 65.357 L 41.253 65.357 Z " fill="rgb(0,0,0)"/>
+    <path d=" M 75.467 61.75 L 89.864 75.327 L 127.899 109.004 L 150 109.004 L 96.181 57.219 L 150 0.996 L 127.668 0.996 L 89.916 40.944 L 90.263 0.996 L 75.467 0.996 L 75.467 61.75 Z " fill="rgb(0,0,0)"/>
+    <path d=" M 0.01 109.004 L 0.01 48.342 L 0.01 48.342 L 46.293 48.342 L 55.771 61.75 L 14.806 61.75 L 15.176 109.004 L 0.01 109.004 Z " fill="rgb(0,0,0)"/>
+    <path d=" M 0.01 43.626 L 0.01 0.996 L 0.01 0.996 L 58.591 0.996 L 58.221 14.312 L 15.176 14.312 L 15.176 43.626 L 0.01 43.626 Z " fill="rgb(0,0,0)"/>
+  </g>
+</svg>

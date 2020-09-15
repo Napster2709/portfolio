@@ -1,22 +1,19 @@
 @import 'styles/common.scss';
 
 .about {
+  @include font-p();
   display: flex;
-  align-items: center;
   flex-direction: column;
-  animation: flyIn 1s ease;
+  text-align: left;
+}
+
+.title {
+  font-size: 5rem;
+}
+
+.line {
+  margin: inherit;
 }
 
 .container {
-}
-
-@keyframes flyIn {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

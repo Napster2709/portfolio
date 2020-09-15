@@ -10,6 +10,7 @@
 
 .logo {
   svg {
+    width: 100pt;
     :nth-child(1) {
       animation: slideUp 1s ease;
     }
@@ -27,11 +28,6 @@
 
 .content {
   flex-direction: column;
-}
-
-.line {
-  background-color: $red;
-  height: 3px;
-  width: 150px;
-  margin: 3rem auto;
+  position: relative;
+  top: -50px;
 }

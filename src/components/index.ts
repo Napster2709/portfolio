@@ -8,3 +8,4 @@ export * from './list';
 export * from './button';
 export * from './logo';
 export * from './header';
+export * from './line';

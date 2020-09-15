@@ -42,6 +42,14 @@ const Welcome = () => {
         )}
         onAnimationEnd={onAnimationEndHandler}
       >
+        <div className={styles.callForAction} onClick={() =>
+            context.setCurrentState({
+              ...context,
+              transitioning: true,
+            })
+          }>
+        <Logo className={styles.logo} />
+        {/* <div className={cn(styles.line, styles.slideDown)} />
         <Huge
           className={cn(styles.title)}
           onClick={() =>
@@ -52,9 +60,8 @@ const Welcome = () => {
           }
         >
           {title}
-        </Huge>
-        <div className={cn(styles.line, styles.slideDown)} />
-        <Logo className={styles.logo} />
+        </Huge> */}
+        </div>
       </div>
     )
   );

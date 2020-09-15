@@ -2,8 +2,7 @@
 
 .logo {
   svg {
-    width: 150pt;
-    height: 150pt;
+    width: 100pt;
     :nth-child(1) {
       animation: slideUp 1s ease;
     }
@@ -24,15 +23,22 @@
   letter-spacing: 1px;
 }
 
-.line {
-  background-color: $red;
-  height: 3px;
-  width: 150px;
-  margin: 0 auto 2rem auto;
-}
-
 .content {
   flex-direction: column;
   position: relative;
   top: -50px;
+}
+
+.line {
+  margin: 0 auto 1rem auto;
+}
+
+@media (prefers-color-scheme: light) {
+  .logo {
+    fill: $black;
+  }
+
+  .title {
+    color: $black;
+  }
 }

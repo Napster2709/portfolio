@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles.scss';
-import { Huge, Logo } from 'components';
+import { Huge, Line, Logo } from 'components';
 import cn from 'classnames';
 import { writeText } from 'utils';
 
@@ -25,7 +25,7 @@ const Soon = () => {
       )}
     >
       <Logo className={cn(styles.logo)} />
-      <div className={cn(styles.line, styles.slideDown)} />
+      <Line className={cn(styles.slideDown, styles.line)} />
       <Huge className={cn(styles.title, styles.slideUp)}>{title}</Huge>
     </div>
   );
