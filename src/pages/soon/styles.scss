@@ -3,15 +3,19 @@
 .logo {
   svg {
     width: 100pt;
+    // v
     :nth-child(1) {
       animation: slideUp 1s ease;
     }
+    // k
     :nth-child(2) {
       animation: slideLeft 1s ease;
     }
+    // r
     :nth-child(3) {
       animation: slideRight 1s ease;
     }
+    // f
     :nth-child(4) {
       animation: slideDown 1s ease;
     }

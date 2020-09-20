@@ -4,12 +4,19 @@ import cn from 'classnames';
 
 interface LineProps {
   className?: string;
+  align?: 'center' | 'left' | 'right';
 }
 
-const Line = ({className}: LineProps) => {
+const Line = ({ className, align = 'center' }: LineProps) => {
   return (
-    <div className={cn(className, styles.line)}/>
-  )
-}
+    <div
+      className={cn(className, styles.container, {
+        [styles[align as string]]: align,
+      })}
+    >
+      <div className={styles.line} />
+    </div>
+  );
+};
 
-export {Line}
+export { Line };

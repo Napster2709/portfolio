@@ -1,8 +1,34 @@
 @import 'styles/common.scss';
 
-.line {
-  background-color: $red;
-  height: 3px;
-  width: 150px;
-  margin: 0 auto;
+.container {
+  display: flex;
+
+  &.center {
+    justify-content: center;
+
+    @media all and (max-width: $mobile) {
+      justify-content: flex-start;
+    }
+  }
+
+  &.left {
+    justify-content: flex-start;
+
+    @media all and (max-width: $mobile) {
+      justify-content: flex-start;
+    }
+  }
+
+  &.right {
+    justify-content: flex-end;
+
+    @media all and (max-width: $mobile) {
+      justify-content: flex-start;
+    }
+  }
+  .line {
+    background-color: $red;
+    height: 3px;
+    width: 150px;
+  }
 }

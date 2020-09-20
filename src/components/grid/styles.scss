@@ -58,21 +58,21 @@
   }
 }
 
-@media all and (max-width: $mobile) {
-  .container {
-    .column {
-      &.1,
-      &.2,
-      &.3,
-      &.4,
-      &.5 {
-        grid-area: auto / span 6;
-      }
-    }
-  }
-}
+// @media all and (max-width: $mobile) {
+//   .container {
+//     .column {
+//       &.1,
+//       &.2,
+//       &.3,
+//       &.4,
+//       &.5 {
+//         grid-area: auto / span 6;
+//       }
+//     }
+//   }
+// }
 
-@media all and (max-width: $smallPhone) {
+@media all and (max-width: $mobile) {
   .container {
     .column {
       &.1,
