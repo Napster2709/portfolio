@@ -3,7 +3,7 @@ import styles from './welcome.styles.scss';
 import cn from 'classnames';
 import { Huge, Logo } from 'components';
 import { writeText } from 'utils';
-import { MainContext, steps } from '../context';
+import { MainContext, steps } from 'utils';
 
 const Welcome = () => {
   const [title, setTitle] = useState<string>('');
@@ -32,7 +32,7 @@ const Welcome = () => {
     context.currentStep === steps.welcome && (
       <div
         className={cn(
-          styles.fullwidth,
+          styles.main,
           styles.centered,
           styles.textAlignCenter,
           styles.content,
@@ -42,14 +42,17 @@ const Welcome = () => {
         )}
         onAnimationEnd={onAnimationEndHandler}
       >
-        <div className={styles.callForAction} onClick={() =>
+        <div
+          className={styles.callForAction}
+          onClick={() =>
             context.setCurrentState({
               ...context,
               transitioning: true,
             })
-          }>
-        <Logo className={styles.logo} />
-        {/* <div className={cn(styles.line, styles.slideDown)} />
+          }
+        >
+          <Logo className={styles.logo} />
+          {/* <div className={cn(styles.line, styles.slideDown)} />
         <Huge
           className={cn(styles.title)}
           onClick={() =>

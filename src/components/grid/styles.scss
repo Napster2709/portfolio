@@ -1,0 +1,93 @@
+@import 'styles/common.scss';
+
+// TODO: functionlise this
+.container {
+  padding: 0 8px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 8px;
+
+  &.fluid {
+    padding: 0;
+  }
+
+  .column {
+    grid-area: auto / span 12;
+
+    &.centered {
+      justify-self: center;
+    }
+
+    &.1 {
+      grid-area: auto / span 1;
+    }
+    &.2 {
+      grid-area: auto / span 2;
+    }
+    &.3 {
+      grid-area: auto / span 3;
+    }
+    &.4 {
+      grid-area: auto / span 4;
+    }
+    &.5 {
+      grid-area: auto / span 5;
+    }
+    &.6 {
+      grid-area: auto / span 6;
+    }
+    &.7 {
+      grid-area: auto / span 7;
+    }
+    &.8 {
+      grid-area: auto / span 8;
+    }
+    &.9 {
+      grid-area: auto / span 9;
+    }
+    &.10 {
+      grid-area: auto / span 10;
+    }
+    &.11 {
+      grid-area: auto / span 11;
+    }
+    &.12 {
+      grid-area: auto / span 12;
+    }
+  }
+}
+
+@media all and (max-width: $mobile) {
+  .container {
+    .column {
+      &.1,
+      &.2,
+      &.3,
+      &.4,
+      &.5 {
+        grid-area: auto / span 6;
+      }
+    }
+  }
+}
+
+@media all and (max-width: $smallPhone) {
+  .container {
+    .column {
+      &.1,
+      &.2,
+      &.3,
+      &.4,
+      &.5,
+      &.6,
+      &.7,
+      &.8,
+      &.9,
+      &.10,
+      &.11 {
+        grid-area: auto / span 12;
+      }
+    }
+  }
+}

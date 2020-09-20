@@ -14,6 +14,9 @@ ReactDOM.render(
           <Main />
           {/* <Soon /> */}
         </Route>
+        <Route exact path="/soon">
+          <Soon />
+        </Route>
         <Route path="*">
           <PageNotFound />
         </Route>

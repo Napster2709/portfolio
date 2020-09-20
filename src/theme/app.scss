@@ -3,10 +3,9 @@
 .app {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 8rem 1fr 1fr 5rem;
+  grid-template-rows: 8rem 1fr 5rem;
   grid-template-areas:
     'logo header header header'
-    'side side side side'
     'main main main main'
     'footer footer footer footer';
   min-height: 100vh;
@@ -18,8 +17,7 @@
   .app {
     grid-template-areas:
       'logo header header header'
-      'side side main main'
-      'side side main main'
+      'main main main main'
       'footer footer footer footer';
   }
 }

@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import styles from './styles.scss';
-import cn from 'classnames';
-import { Welcome } from './welcome';
-import { About } from './about';
-import { MainContext, MainContextState, steps } from './context';
+import { Welcome } from '../welcome';
+import { About } from '../about';
+import { MainContext, MainContextState, steps } from 'utils';
 
 const Main = () => {
   const [state, setstate] = useState<MainContextState>({

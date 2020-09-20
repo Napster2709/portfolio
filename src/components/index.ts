@@ -9,3 +9,4 @@ export * from './button';
 export * from './logo';
 export * from './header';
 export * from './line';
+export * from './grid';

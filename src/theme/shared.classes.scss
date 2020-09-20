@@ -40,17 +40,5 @@
 .main {
   grid-area: main;
   place-self: center;
-  padding-right: 2rem;
-}
-
-.side {
-  grid-area: side;
-  place-self: center;
-  padding-left: 2rem;
-}
-
-.fullwidth {
-  grid-area: side / side / main / main;
-  place-self: center;
   padding: 0 2rem;
 }

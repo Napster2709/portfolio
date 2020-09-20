@@ -18,7 +18,7 @@ const Soon = () => {
   return (
     <div
       className={cn(
-        styles.fullwidth,
+        styles.main,
         styles.centered,
         styles.textAlignCenter,
         styles.content,
