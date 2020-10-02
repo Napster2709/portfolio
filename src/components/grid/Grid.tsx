@@ -15,7 +15,7 @@ interface IGridColumn {
   cols?: number;
 }
 
-const Grid = ({ children, className, fluid }: IGrid) => {
+const Grid = ({ children, className, fluid }: IGrid): React.ReactElement => {
   return (
     <div
       className={classNames(styles.container, className, {
@@ -31,11 +31,16 @@ const Grid = ({ children, className, fluid }: IGrid) => {
 //   return <div className={classname}>{children}</div>;
 // };
 
-Grid.Column = ({ children, cols, className, centered }: IGridColumn) => {
+const Column = ({
+  children,
+  cols,
+  className,
+  centered,
+}: IGridColumn): React.ReactElement => {
   return (
     <div
       className={classNames(styles.column, className, {
-        [styles[cols as any]]: cols,
+        [styles[cols]]: cols,
         [styles.centered]: centered,
       })}
     >
@@ -44,8 +49,10 @@ Grid.Column = ({ children, cols, className, centered }: IGridColumn) => {
   );
 };
 
+Grid.Column = Column;
+
 Grid.displayName = 'Grid';
 // (Grid.Row as any).displayName = 'Grid';
-(Grid.Column as any).displayName = 'Grid';
+(Grid.Column as React.FC<IGridColumn>).displayName = 'Grid';
 
 export { Grid };

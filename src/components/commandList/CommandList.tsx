@@ -11,7 +11,7 @@ interface CommandListProps {
   commands: Command[];
 }
 
-const CommandList = ({ commands }: CommandListProps) => {
+const CommandList = ({ commands }: CommandListProps): React.ReactElement => {
   return (
     <List className={styles.list}>
       {commands.map((command, index: number) => (

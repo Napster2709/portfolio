@@ -2,7 +2,7 @@ import React from 'react';
 import { Logo } from '../logo';
 import styles from './styles.scss';
 
-const Header = () => {
+const Header = (): React.ReactElement => {
   return (
     <>
       <Logo className={styles.logo} />

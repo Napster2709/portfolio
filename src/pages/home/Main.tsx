@@ -3,7 +3,7 @@ import { Welcome } from '../welcome';
 import { About } from '../about';
 import { MainContext, MainContextState, steps } from 'utils';
 
-const Main = () => {
+const Main = (): React.ReactElement => {
   const [state, setstate] = useState<MainContextState>({
     currentStep: steps.about,
     transitioning: false,

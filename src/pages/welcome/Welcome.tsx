@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import styles from './welcome.styles.scss';
 import cn from 'classnames';
-import { Huge, Logo } from 'components';
+import { Logo } from 'components';
 import { writeText } from 'utils';
 import { MainContext, steps } from 'utils';
 
-const Welcome = () => {
+const Welcome = (): React.ReactElement => {
   const [title, setTitle] = useState<string>('');
   const context = useContext(MainContext);
 

@@ -4,7 +4,7 @@ import { Huge, Line, Logo } from 'components';
 import cn from 'classnames';
 import { writeText } from 'utils';
 
-const Soon = () => {
+const Soon = (): React.ReactElement => {
   const [title, setTitle] = useState<string>('');
 
   useEffect(() => {

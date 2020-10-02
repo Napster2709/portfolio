@@ -7,7 +7,10 @@ interface LineProps {
   align?: 'center' | 'left' | 'right';
 }
 
-const Line = ({ className, align = 'center' }: LineProps) => {
+const Line = ({
+  className,
+  align = 'center',
+}: LineProps): React.ReactElement => {
   return (
     <div
       className={cn(className, styles.container, {

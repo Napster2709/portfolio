@@ -1,34 +1,23 @@
 import React from 'react';
 import styles from './styles.scss';
 import cn from 'classnames';
-import { AnyMxRecord } from 'dns';
 
-interface TextInputProps {
-  inputRef?: any;
-  className?: any;
-  value?: any;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
-  disabled?: boolean;
+interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  inputRef?: React.RefObject<HTMLInputElement>;
+  className?: string;
 }
 
 const TextInput = ({
   inputRef,
   className,
-  value,
-  onChange,
-  onKeyDown,
-  disabled,
-}: TextInputProps) => {
+  ...props
+}: TextInputProps): React.ReactElement => {
   return (
     <input
+      {...props}
       ref={inputRef}
       className={cn(className, styles.input)}
-      value={value}
-      onChange={onChange}
-      onKeyDown={onKeyDown}
       spellCheck={false}
-      disabled={disabled}
     />
   );
 };

@@ -7,7 +7,7 @@ import {
   faGithubAlt,
 } from '@fortawesome/free-brands-svg-icons';
 
-const SocialList = () => {
+const SocialList = (): React.ReactElement => {
   return (
     <div className={styles.socialList}>
       <a

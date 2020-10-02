@@ -6,7 +6,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import cn from 'classnames';
 
 interface CommandLineInputProps {
-  submitEvent: (val: any) => void;
+  submitEvent: (val: string) => void;
   value?: string;
   initialFocus?: boolean;
 }
@@ -15,7 +15,7 @@ const CommandLineInput = ({
   submitEvent,
   initialFocus,
   value,
-}: CommandLineInputProps) => {
+}: CommandLineInputProps): React.ReactElement => {
   const inputRef = React.createRef<HTMLInputElement>();
   const [inputValue, setInputValue] = useState<string>(value || '');
 

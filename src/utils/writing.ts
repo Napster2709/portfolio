@@ -10,10 +10,11 @@ export const writeText = async ({
   text,
   setNewText,
   delay = 50,
-}: WriteTextProps) => {
-  let newText: string = '';
+}: WriteTextProps): Promise<string> => {
+  let newText = '';
 
-  return new Promise(async (resolve, reject) => {
+  // eslint-disable-next-line no-async-promise-executor
+  return new Promise(async (resolve, _) => {
     let i = 0;
     for (i; i < text.length; i++) {
       newText = newText + text[i];

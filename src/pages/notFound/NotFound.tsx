@@ -1,10 +1,10 @@
-import { Button, Huge } from 'components';
+import { Huge } from 'components';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './styles.scss';
 import cn from 'classnames';
 
-const PageNotFound = () => {
+const PageNotFound = (): React.ReactElement => {
   return (
     <div
       className={cn(

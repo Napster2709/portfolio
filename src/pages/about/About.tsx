@@ -4,7 +4,7 @@ import styles from './about.styles.scss';
 import cn from 'classnames';
 import { Grid, Header, Line } from 'components';
 
-const About = () => {
+const About = (): React.ReactElement => {
   const context = useContext(MainContext);
   return (
     context.currentStep === steps.about && (
@@ -22,7 +22,7 @@ const About = () => {
             >
               <h1 className={styles.title}>About Me</h1>
               <Line className={styles.line} align="right" />
-              <h3>i'm Frederik R. von Kiedrowski</h3>
+              <h3>i&apos;m Frederik R. von Kiedrowski</h3>
             </Grid.Column>
             <Grid.Column
               cols={7}

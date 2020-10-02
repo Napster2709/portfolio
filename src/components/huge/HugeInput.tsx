@@ -1,6 +1,6 @@
 import React, { useState, createRef, useEffect } from 'react';
 import styles from './styles.input.scss';
-import { sleep } from 'utils';
+import { sleep, writeText } from 'utils';
 import { TextInput } from '../textInput';
 import textJson from './texts.json';
 
@@ -18,7 +18,7 @@ interface TextArrayItems {
   value: string[];
 }
 
-const HugeInput = ({ value }: HugeInputProps) => {
+const HugeInput = ({ value }: HugeInputProps): React.ReactElement => {
   const [inputValue, setInputValue] = useState(value);
   const [disabled, setDisabled] = useState<boolean>(false);
   const inputRef = createRef<HTMLInputElement>();
@@ -50,30 +50,17 @@ const HugeInput = ({ value }: HugeInputProps) => {
 
   const typeingAnimation = async (match: TextMatch) => {
     await clearWriting(match.oldValue);
-    await writeText(match.newValue);
-    activeInput();
-  };
-
-  const writeText = async (text: string) => {
-    let newText: string = '';
-    return new Promise(async (resolve, reject) => {
-      let i = 0;
-      for (i; i < text.length; i++) {
-        newText = newText + text[i];
-        setInputValue(newText);
-        await sleep(50);
-      }
-
-      if (i === text.length) {
-        resolve();
-      }
+    await writeText({
+      text: match.newValue,
+      setNewText: (newText: string) => setInputValue(newText),
     });
+    activeInput();
   };
 
   const clearWriting = async (text: string) => {
     let newString: string = text;
     setDisabled(true);
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, _) => {
       const clear = setInterval(() => {
         if (newString.length > 0) {
           newString = newString.slice(0, -1);
