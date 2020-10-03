@@ -1,22 +1,26 @@
 @import 'styles/common.scss';
 
 .header {
-  grid-area: header;
+  position: fixed;
   display: flex;
   align-items: center;
-  padding-top: 2rem;
-  padding-right: 2rem;
+  justify-content: space-between;
+  padding: 1.2rem 2rem 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(10px);
+}
+
+.navigation {
+  height: 100%;
+  width: 50%;
 }
 
 .logo {
-  grid-area: logo;
-  display: flex;
-  align-items: center;
-  padding-top: 2rem;
-  padding-left: 2rem;
-
   svg {
     width: 80pt;
+    height: 80pt;
     // v
     :nth-child(1) {
       animation: slideRight 1s ease forwards;

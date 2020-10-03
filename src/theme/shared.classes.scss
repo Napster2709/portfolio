@@ -17,6 +17,10 @@
   animation: slideDown 1s ease;
 }
 
+.fadeIn {
+  animation: fadeIn 1s ease;
+}
+
 // Utility
 .centered {
   display: flex;
@@ -36,9 +40,15 @@
   overflow: hidden;
 }
 
-// Main grid area
 .main {
   grid-area: main;
   place-self: center;
   padding: 0 2rem;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
