@@ -5,6 +5,10 @@
   position: relative;
   font-size: 5rem;
 
+  @media (prefers-color-scheme: light) {
+    color: $dark;
+  }
+
   // &:after {
   //   display: block;
   //   position: absolute;

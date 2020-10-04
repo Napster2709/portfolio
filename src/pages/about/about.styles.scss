@@ -1,7 +1,6 @@
 @import 'styles/common.scss';
 
 .text {
-  @include font-p();
   max-width: 800px;
   place-self: center;
 }

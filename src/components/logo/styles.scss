@@ -3,3 +3,9 @@
 .logo {
   fill: $grey;
 }
+
+@media (prefers-color-scheme: light) {
+  .logo {
+    fill: $dark;
+  }
+}

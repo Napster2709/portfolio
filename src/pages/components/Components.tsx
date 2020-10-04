@@ -1,4 +1,4 @@
-import { Grid, Huge } from 'components';
+import { Grid, Huge, Timeline } from 'components';
 import React from 'react';
 import styles from './styles.scss';
 
@@ -43,7 +43,13 @@ const Components = (): React.ReactElement => {
         <Grid.Column>
           <Huge>Timeline</Huge>
         </Grid.Column>
-        <Grid.Column>blabla</Grid.Column>
+        <Grid.Column>
+          <Timeline>
+            <Timeline.Item label="11.09.1990">bla</Timeline.Item>
+            <Timeline.Item label="11.09.1991">blub</Timeline.Item>
+            <Timeline.Item label="11.09.1992">blabel</Timeline.Item>
+          </Timeline>
+        </Grid.Column>
       </Grid>
     </div>
   );
