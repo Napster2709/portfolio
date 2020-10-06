@@ -23,9 +23,12 @@
 
 // Utility
 .centered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+}
+
+.height100 {
+  height: 100%;
 }
 
 .textAlignCenter {
@@ -42,11 +45,4 @@
 
 .main {
   grid-area: main;
-  // place-self: center;
-  padding: 0 2rem;
-}
-
-.section {
-  min-height: 100vh;
-  display: grid;
 }

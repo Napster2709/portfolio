@@ -1,0 +1,20 @@
+@import 'styles/common';
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1920px) 1fr;
+
+  & > * {
+    grid-column: 2;
+    padding: 0 2rem;
+  }
+
+  &.fullHeight {
+    min-height: 100vh;
+  }
+
+  &.fullWidth {
+    width: 100%;
+    grid-template-columns: 1fr 100% 1fr;
+  }
+}

@@ -5,7 +5,7 @@
   grid-template-columns: 1fr minmax(auto, 1920px) 1fr;
   grid-template-rows: auto 5rem;
   grid-template-areas:
-    'ml main mr'
+    'main main main'
     'fl footer fr';
   min-height: 100vh;
 }

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import styles from './welcome.styles.scss';
 import cn from 'classnames';
-import { Line, Logo } from 'components';
+import { Line, Logo, Section } from 'components';
 import { MainContext, steps } from 'utils';
 
 const Welcome = (): React.ReactElement => {
@@ -19,23 +19,25 @@ const Welcome = (): React.ReactElement => {
   };
 
   return (
-    <div
-      className={cn(styles.centered, styles.textAlignCenter, styles.content)}
-      onAnimationEnd={onAnimationEndHandler}
-    >
+    <Section fullHeight>
       <div
-        className={styles.callForAction}
-        onClick={() =>
-          context.setCurrentState({
-            ...context,
-            transitioning: true,
-          })
-        }
+        className={cn(styles.centered, styles.textAlignCenter, styles.content)}
+        onAnimationEnd={onAnimationEndHandler}
       >
-        <Logo className={styles.logo} />
-        <Line className={styles.slideDown} />
+        <div
+          className={styles.callForAction}
+          onClick={() =>
+            context.setCurrentState({
+              ...context,
+              transitioning: true,
+            })
+          }
+        >
+          <Logo className={styles.logo} />
+          <Line className={styles.slideDown} />
+        </div>
       </div>
-    </div>
+    </Section>
   );
 };
 

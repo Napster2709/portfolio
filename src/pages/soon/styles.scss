@@ -28,6 +28,8 @@
 }
 
 .content {
+  display: grid;
+  place-self: center;
   flex-direction: column;
   position: relative;
   top: -50px;

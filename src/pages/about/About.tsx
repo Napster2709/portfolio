@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import { MainContext, steps } from 'utils';
+import { MainContext } from 'utils';
 import styles from './about.styles.scss';
 import cn from 'classnames';
-import { Grid, Line } from 'components';
+import { Grid, Line, Section } from 'components';
 
 const About = (): React.ReactElement => {
   const context = useContext(MainContext);
   return (
-    <div className={styles.section}>
+    <Section fullHeight>
       <div className={styles.centered}>
         <Grid fluid>
           <Grid.Column cols={5} className={cn(styles.about)}>
@@ -20,7 +20,11 @@ const About = (): React.ReactElement => {
               i&apos;m Frederik R. von Kiedrowski
             </h3>
           </Grid.Column>
-          <Grid.Column cols={7} className={cn(styles.text, styles.slideRight)}>
+          <Grid.Column
+            cols={7}
+            centered
+            className={cn(styles.text, styles.slideRight)}
+          >
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
               distinctio sapiente possimus esse eius voluptates rerum optio
@@ -43,7 +47,7 @@ const About = (): React.ReactElement => {
           </Grid.Column>
         </Grid>
       </div>
-    </div>
+    </Section>
   );
 };
 

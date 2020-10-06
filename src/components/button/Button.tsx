@@ -2,13 +2,11 @@ import React from 'react';
 import styles from './styles.scss';
 import cn from 'classnames';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  className?: string;
-}
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button: React.FC<ButtonProps> = ({ ...props }) => {
   return (
-    <button {...props} className={cn(styles.button, props.className)}>
+    <button className={cn(styles.button, props.className)} {...props}>
       {props.children}
     </button>
   );

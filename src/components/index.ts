@@ -11,3 +11,4 @@ export * from './header';
 export * from './line';
 export * from './grid';
 export * from './timeline';
+export * from './section';

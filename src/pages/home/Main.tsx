@@ -20,7 +20,7 @@ const Main = (): React.ReactElement => {
       }}
     >
       <div
-        className={cn(styles.main, {
+        className={cn({
           [styles['header-visible']]: state.currentStep !== steps.welcome,
         })}
       >
