@@ -2,28 +2,21 @@
 
 .container {
   display: flex;
+  justify-content: flex-start;
 
   &.center {
-    justify-content: center;
-
-    @media all and (max-width: $mobile) {
-      justify-content: flex-start;
+    @media all and (min-width: $mobile) {
+      justify-content: center;
     }
   }
 
   &.left {
     justify-content: flex-start;
-
-    @media all and (max-width: $mobile) {
-      justify-content: flex-start;
-    }
   }
 
   &.right {
-    justify-content: flex-end;
-
-    @media all and (max-width: $mobile) {
-      justify-content: flex-start;
+    @media all and (min-width: $mobile) {
+      justify-content: flex-end;
     }
   }
   .line {

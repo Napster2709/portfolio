@@ -2,20 +2,10 @@
 
 .app {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr minmax(auto, 1920px) 1fr;
   grid-template-rows: auto 5rem;
   grid-template-areas:
-    'main main main main'
-    'footer footer footer footer';
+    'ml main mr'
+    'fl footer fr';
   min-height: 100vh;
-  max-width: 1920px;
-  margin: 0 auto;
-}
-
-@media all and (min-width: $tablet) {
-  .app {
-    grid-template-areas:
-      'main main main main'
-      'footer footer footer footer';
-  }
 }

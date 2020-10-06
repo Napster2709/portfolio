@@ -42,13 +42,11 @@
 
 .main {
   grid-area: main;
-  place-self: center;
+  // place-self: center;
   padding: 0 2rem;
 }
 
 .section {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
 }
