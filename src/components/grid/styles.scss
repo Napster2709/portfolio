@@ -5,7 +5,7 @@ $columns: 12;
 .container {
   padding: 0 8px;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat($columns, 1fr);
   grid-template-rows: auto;
   grid-column-gap: 8px;
 
@@ -14,7 +14,7 @@ $columns: 12;
   }
 
   .column {
-    grid-area: auto / span 12;
+    grid-area: auto / span $columns;
 
     &.centered {
       place-self: center;
