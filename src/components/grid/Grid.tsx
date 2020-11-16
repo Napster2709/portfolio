@@ -40,7 +40,7 @@ const Column = ({
   return (
     <div
       className={classNames(styles.column, className, {
-        [styles[cols]]: cols,
+        [styles[`_${cols}`]]: cols,
         [styles.centered]: centered,
       })}
     >

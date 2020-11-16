@@ -26,7 +26,7 @@ $columns: 12;
   .container {
     .column {
       @for $cols from 1 to $columns {
-        &.#{$cols} {
+        &._#{$cols} {
           grid-area: auto / span #{$cols};
         }
       }
