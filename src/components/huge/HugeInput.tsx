@@ -67,7 +67,7 @@ const HugeInput = ({ value }: HugeInputProps): React.ReactElement => {
           setInputValue(newString);
         } else {
           clearInterval(clear);
-          resolve();
+          resolve('');
         }
       }, 150);
     });

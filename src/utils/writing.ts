@@ -14,7 +14,7 @@ export const writeText = async ({
   let newText = '';
 
   // eslint-disable-next-line no-async-promise-executor
-  return new Promise(async (resolve, _) => {
+  return new Promise(async (resolve) => {
     let i = 0;
     for (i; i < text.length; i++) {
       newText = newText + text[i];
@@ -23,7 +23,7 @@ export const writeText = async ({
     }
 
     if (i === text.length) {
-      resolve();
+      resolve('');
     }
   });
 };

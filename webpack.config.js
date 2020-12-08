@@ -11,7 +11,6 @@ module.exports = [
   {
     mode: env || 'development',
     target: 'web',
-    node: { fs: 'empty' },
     entry: './src/index.tsx',
     devtool: 'source-map',
     resolve: {
