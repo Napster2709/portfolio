@@ -4,7 +4,7 @@ import { SocialList } from 'components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright } from '@fortawesome/free-solid-svg-icons';
 
-const Footer = (): React.ReactElement => {
+const Footer: React.FC = () => {
   return (
     <div className={styles.footer}>
       <SocialList />

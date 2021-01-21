@@ -6,7 +6,7 @@ interface LogoProps {
   className?: string;
 }
 
-const Logo = ({ className }: LogoProps): React.ReactElement => {
+const Logo: React.FC<LogoProps> = ({ className }) => {
   return (
     <div className={cn(styles.logo, className)}>
       <svg viewBox="0 0 150 110" width="150pt" height="110pt">

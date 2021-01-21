@@ -18,7 +18,7 @@ interface TextArrayItems {
   value: string[];
 }
 
-const HugeInput = ({ value }: HugeInputProps): React.ReactElement => {
+const HugeInput: React.FC<HugeInputProps> = ({ value }) => {
   const [inputValue, setInputValue] = useState(value);
   const [disabled, setDisabled] = useState<boolean>(false);
   const inputRef = createRef<HTMLInputElement>();

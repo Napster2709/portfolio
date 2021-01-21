@@ -12,3 +12,4 @@ export * from './line';
 export * from './grid';
 export * from './timeline';
 export * from './section';
+export * from './path';

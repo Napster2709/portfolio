@@ -2,20 +2,24 @@ import React from 'react';
 import styles from './styles.scss';
 import classNames from 'classnames';
 
-interface IGrid {
+interface GridProps {
   children?: React.ReactNode;
   className?: string;
   fluid?: boolean;
 }
 
-interface IGridColumn {
+interface GridColumnProps {
   centered?: boolean;
   className?: string;
   children?: React.ReactNode;
   cols?: number;
 }
 
-const Grid = ({ children, className, fluid }: IGrid): React.ReactElement => {
+const Grid = ({
+  children,
+  className,
+  fluid,
+}: GridProps): React.ReactElement => {
   return (
     <div
       className={classNames(styles.container, className, {
@@ -31,12 +35,12 @@ const Grid = ({ children, className, fluid }: IGrid): React.ReactElement => {
 //   return <div className={classname}>{children}</div>;
 // };
 
-const Column = ({
+const Column: React.FC<GridColumnProps> = ({
   children,
   cols,
   className,
   centered,
-}: IGridColumn): React.ReactElement => {
+}) => {
   return (
     <div
       className={classNames(styles.column, className, {
@@ -53,6 +57,6 @@ Grid.Column = Column;
 
 Grid.displayName = 'Grid';
 // (Grid.Row as any).displayName = 'Grid';
-(Grid.Column as React.FC<IGridColumn>).displayName = 'Grid';
+(Grid.Column as React.FC<GridColumnProps>).displayName = 'Grid';
 
 export { Grid };

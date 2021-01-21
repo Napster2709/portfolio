@@ -9,12 +9,12 @@ interface HugeProps {
   onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
-const Huge = ({
+const Huge: React.FC<HugeProps> = ({
   children,
   className,
   onAnimationEnd,
   onClick,
-}: HugeProps): React.ReactElement => {
+}: HugeProps) => {
   return (
     <div
       className={cn(className, styles.hugeFont, {
