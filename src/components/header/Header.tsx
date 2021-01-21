@@ -4,7 +4,7 @@ import { Logo } from '../logo';
 import styles from './styles.scss';
 import cn from 'classnames';
 
-const Header = (): React.ReactElement => {
+const Header: React.FC = () => {
   const context = useContext(MainContext);
   return (
     context.currentStep != steps.welcome && (

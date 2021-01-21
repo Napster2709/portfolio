@@ -9,12 +9,12 @@ interface SectionProps {
   className?: string;
 }
 
-const Section = ({
+const Section: React.FC<SectionProps> = ({
   fullWidth,
   fullHeight,
   children,
   className,
-}: SectionProps): React.ReactElement => {
+}) => {
   return (
     <div
       className={cn(styles.section, className, {

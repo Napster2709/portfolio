@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.scss';
 import cn from 'classnames';
 
@@ -7,10 +7,7 @@ interface LineProps {
   align?: 'center' | 'left' | 'right';
 }
 
-const Line = ({
-  className,
-  align = 'center',
-}: LineProps): React.ReactElement => {
+const Line: React.FC<LineProps> = ({ className, align = 'center' }) => {
   return (
     <div
       className={cn(className, styles.container, {

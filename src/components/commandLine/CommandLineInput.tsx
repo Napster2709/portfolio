@@ -11,11 +11,11 @@ interface CommandLineInputProps {
   initialFocus?: boolean;
 }
 
-const CommandLineInput = ({
+const CommandLineInput: React.FC<CommandLineInputProps> = ({
   submitEvent,
   initialFocus,
   value,
-}: CommandLineInputProps): React.ReactElement => {
+}) => {
   const inputRef = React.createRef<HTMLInputElement>();
   const [inputValue, setInputValue] = useState<string>(value || '');
 

@@ -3,6 +3,7 @@
 .container {
   display: flex;
   justify-content: flex-start;
+  transition: transform 0.5s ease;
 
   &.center {
     @media all and (min-width: $mobile) {

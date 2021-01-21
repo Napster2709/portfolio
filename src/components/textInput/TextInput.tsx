@@ -6,10 +6,7 @@ interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   inputRef?: React.RefObject<HTMLInputElement>;
 }
 
-const TextInput = ({
-  inputRef,
-  ...props
-}: TextInputProps): React.ReactElement => {
+const TextInput: React.FC<TextInputProps> = ({ inputRef, ...props }) => {
   return (
     <input
       ref={inputRef}
