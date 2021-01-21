@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export const Path: React.FC = () => {
+export const Drawing: React.FC = () => {
   const [scrollTop, setScrollTop] = useState<number>(0);
 
   useEffect(() => {
