@@ -1,0 +1,115 @@
+@import 'styles/common.scss';
+
+$rays: 9;
+$distance: 1rem;
+
+.sun {
+  fill: $white;
+  width: 40pt;
+  height: 40pt;
+
+  // 1s cubic-bezier(0.86, -0.01, 0.33, 0.97)
+  &.animate {
+    path {
+      @for $ray from 1 to $rays {
+        &._#{$ray} {
+          $deplay: calc(#{$ray} * 0.2);
+          animation: animation_#{$ray} 1s ease;
+          animation-delay: $ray * 0.1s;
+
+          &.done {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes animation_1 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(#{$distance});
+    opacity: 0;
+  }
+}
+
+@keyframes animation_2 {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(#{$distance}) translateX(#{$distance});
+    opacity: 0;
+  }
+}
+
+@keyframes animation_3 {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(#{$distance});
+    opacity: 0;
+  }
+}
+
+@keyframes animation_4 {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-#{$distance}) translateX(#{$distance});
+    opacity: 0;
+  }
+}
+
+@keyframes animation_5 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-#{$distance});
+    opacity: 0;
+  }
+}
+
+@keyframes animation_6 {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-#{$distance}) translateX(-#{$distance});
+    opacity: 0;
+  }
+}
+
+@keyframes animation_7 {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-#{$distance});
+    opacity: 0;
+  }
+}
+
+@keyframes animation_8 {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(#{$distance}) translateX(-#{$distance});
+    opacity: 0;
+  }
+}

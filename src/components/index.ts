@@ -13,3 +13,4 @@ export * from './grid';
 export * from './timeline';
 export * from './section';
 export * from './drawing';
+export * from './darkModeToggle';

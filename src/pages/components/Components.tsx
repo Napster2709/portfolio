@@ -1,4 +1,4 @@
-import { Grid, Huge, Timeline } from 'components';
+import { DarkModeToggle, Grid, Huge } from 'components';
 import React from 'react';
 import styles from './styles.scss';
 
@@ -39,7 +39,7 @@ const Components = (): React.ReactElement => {
           </Grid>
         </Grid.Column>
       </Grid>
-      <Grid>
+      {/* <Grid>
         <Grid.Column>
           <Huge>Timeline</Huge>
         </Grid.Column>
@@ -49,6 +49,14 @@ const Components = (): React.ReactElement => {
             <Timeline.Item label="11.09.1991">blub</Timeline.Item>
             <Timeline.Item label="11.09.1992">blabel</Timeline.Item>
           </Timeline>
+        </Grid.Column>
+      </Grid> */}
+      <Grid>
+        <Grid.Column cols={6} centered>
+          <DarkModeToggle />
+        </Grid.Column>
+        <Grid.Column cols={6}>
+          <Huge>Dark mode Toggle</Huge>
         </Grid.Column>
       </Grid>
     </div>
