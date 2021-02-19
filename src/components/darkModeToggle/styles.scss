@@ -8,8 +8,22 @@ $distance: 1rem;
   width: 40pt;
   height: 40pt;
 
+  .circle {
+  }
+
+  .shadow {
+    clip-path: circle(18px at 70px 14px);
+    will-change: clip-path;
+    fill: $dark;
+    transition: clip-path 1.5s ease;
+  }
+
   // 1s cubic-bezier(0.86, -0.01, 0.33, 0.97)
   &.animate {
+    .shadow {
+      clip-path: circle(18px at 32px 14px);
+    }
+
     path {
       @for $ray from 1 to $rays {
         &._#{$ray} {

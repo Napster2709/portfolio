@@ -24,7 +24,14 @@ const DarkModeToggle: React.FC = () => {
         viewBox="0 0 100 100"
         onClick={onClickHandler}
       >
-        <circle cx="50" cy="50" r="18" fill="rgb(255,255,255)" />
+        <circle
+          className={styles.circle}
+          cx="50"
+          cy="50"
+          r="18"
+          fill="rgb(255,255,255)"
+        />
+        <circle className={styles.shadow} cx="50" cy="50" r="20" />
         <path
           className={cn(styles._1, {
             [styles.done]: done,
