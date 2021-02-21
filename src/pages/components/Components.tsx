@@ -1,4 +1,4 @@
-import { DarkModeToggle, Grid, Huge } from 'components';
+import { ColorThemeToggle, Grid, Huge } from 'components';
 import React from 'react';
 import styles from './styles.scss';
 
@@ -53,7 +53,7 @@ const Components = (): React.ReactElement => {
       </Grid> */}
       <Grid>
         <Grid.Column cols={6} centered>
-          <DarkModeToggle />
+          <ColorThemeToggle />
         </Grid.Column>
         <Grid.Column cols={6}>
           <Huge>Dark mode Toggle</Huge>

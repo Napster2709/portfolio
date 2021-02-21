@@ -4,7 +4,7 @@
   fill: $grey;
 }
 
-@media (prefers-color-scheme: light) {
+[data-theme='light'] {
   .logo {
     fill: $dark;
   }

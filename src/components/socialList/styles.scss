@@ -9,25 +9,25 @@
     font-size: 1.2rem;
     animation: slideRight 1s ease;
   }
-}
 
-.github {
-  transition: color 0.5s ease;
-  &:hover {
-    color: $github;
+  .github {
+    transition: color 0.5s ease;
+    &:hover {
+      color: $github;
+    }
   }
-}
 
-.xing {
-  transition: color 0.5s ease;
-  &:hover {
-    color: $xing;
+  .xing {
+    transition: color 0.5s ease;
+    &:hover {
+      color: $xing;
+    }
   }
-}
 
-.stackoverflow {
-  transition: color 0.5s ease;
-  &:hover {
-    color: $stackoverflow;
+  .stackoverflow {
+    transition: color 0.5s ease;
+    &:hover {
+      color: $stackoverflow;
+    }
   }
 }

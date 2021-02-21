@@ -5,7 +5,7 @@
   letter-spacing: 1px;
   color: $grey;
 
-  @media (prefers-color-scheme: light) {
+  [data-theme='light'] {
     color: $dark;
   }
 }

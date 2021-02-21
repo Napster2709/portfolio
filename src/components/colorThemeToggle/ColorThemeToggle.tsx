@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import styles from './styles.scss';
 import cn from 'classnames';
+import { toggleColorScheme } from 'utils';
 
-const DarkModeToggle: React.FC = () => {
+const ColorThemeToggle: React.FC = () => {
   const [clicked, setclicked] = useState<boolean>(false);
   const [done, setDone] = useState<boolean>(false);
+
   const onClickHandler = (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
+    toggleColorScheme();
     setDone(false);
     setclicked(!clicked);
   };
@@ -93,4 +96,4 @@ const DarkModeToggle: React.FC = () => {
   );
 };
 
-export { DarkModeToggle };
+export { ColorThemeToggle };

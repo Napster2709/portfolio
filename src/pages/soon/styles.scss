@@ -39,7 +39,7 @@
   margin: 0 auto 1rem auto;
 }
 
-@media (prefers-color-scheme: light) {
+[data-theme='light'] {
   .logo {
     fill: $black;
   }

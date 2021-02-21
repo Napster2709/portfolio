@@ -4,10 +4,7 @@
   color: $grey;
   position: relative;
   font-size: 5rem;
-
-  @media (prefers-color-scheme: light) {
-    color: $dark;
-  }
+  transition: color 0.5s ease;
 
   // &:after {
   //   display: block;
@@ -20,6 +17,12 @@
   //   background-color: #fff;
   //   animation: typeing 1s ease infinite;
   // }
+}
+
+[data-theme='light'] {
+  .hugeFont {
+    color: $dark;
+  }
 }
 
 // @media all and (max-width: $smallPhone) {
