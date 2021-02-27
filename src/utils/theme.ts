@@ -4,29 +4,23 @@ interface detectColorSchemeProps {
 
 export const detectColorScheme = ({
   overwrite = false,
-}: detectColorSchemeProps): void => {
+}: detectColorSchemeProps): string => {
   const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)')
     .matches
     ? 'dark'
     : 'light';
   const savedColorScheme = localStorage.getItem('theme');
 
-  console.log(systemColorScheme);
-
   if (overwrite || !localStorage.getItem('theme')) {
     localStorage.setItem('theme', `${systemColorScheme}`);
-    return document.documentElement.setAttribute(
-      'data-theme',
-      `${systemColorScheme}`,
-    );
+    document.documentElement.setAttribute('data-theme', `${systemColorScheme}`);
   }
 
   if (localStorage.getItem('theme')) {
-    return document.documentElement.setAttribute(
-      'data-theme',
-      `${savedColorScheme}`,
-    );
+    document.documentElement.setAttribute('data-theme', `${savedColorScheme}`);
   }
+
+  return systemColorScheme;
 };
 
 export const toggleColorScheme = (): void => {

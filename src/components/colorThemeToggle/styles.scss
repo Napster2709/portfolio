@@ -3,39 +3,52 @@
 $rays: 9;
 $distance: 1rem;
 
-.sun {
+.sunMoon {
   fill: $white;
   width: 40pt;
   height: 40pt;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 1s ease;
 
   .circle {
+    fill: $white;
+    transition: fill 0.5s ease;
   }
 
   .shadow {
-    clip-path: circle(18px at 70px 14px);
+    clip-path: circle(18px at 32px 14px);
     will-change: clip-path;
     fill: $dark;
-    transition: clip-path 1.5s ease;
+    transition: clip-path 0.5s ease, fill 0.5s ease;
   }
 
-  // 1s cubic-bezier(0.86, -0.01, 0.33, 0.97)
-  &.animate {
-    .shadow {
-      clip-path: circle(18px at 32px 14px);
+  path {
+    @for $ray from 1 to $rays {
+      &._#{$ray} {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+    }
+  }
+}
+
+[data-theme='light'] {
+  .sunMoon {
+    fill: $dark;
+    transform: rotate(100deg);
+
+    .circle {
+      fill: $dark;
     }
 
     path {
-      @for $ray from 1 to $rays {
-        &._#{$ray} {
-          $deplay: calc(#{$ray} * 0.2);
-          animation: animation_#{$ray} 1s ease;
-          animation-delay: $ray * 0.1s;
+      opacity: 1;
+    }
 
-          &.done {
-            opacity: 0;
-          }
-        }
-      }
+    .shadow {
+      clip-path: circle(18px at 70px 14px);
+      fill: $white;
     }
   }
 }
