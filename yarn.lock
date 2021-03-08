@@ -6958,12 +6958,12 @@ tiny-warning@^1.0.0, tiny-warning@^1.0.3:
   integrity sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==
 
 tmi.js@^1.5.0:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/tmi.js/-/tmi.js-1.7.1.tgz#dbd250e49a35ad238eec29bd2237c8efe4db6555"
-  integrity sha512-QCGDjVT0i8GZ99paBsaXDvd++A7PzW051S2BSXClMni5gDj5wUV6+YIZAwUtLkvbR/lD9QlqjNJloCNuFYGo+A==
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/tmi.js/-/tmi.js-1.7.3.tgz#d8269214b9b950484af0e9db2eb76c3c3f78e0a1"
+  integrity sha512-56hIYuRR2sDAWgwtciEymRKlx52FtOD262fGI8/2P84z8u60n5FgelBUCRkxvDdOqneA3Fe5kCF+fWuic8YdWg==
   dependencies:
     node-fetch "2.6.1"
-    ws "7.4.0"
+    ws "7.4.3"
 
 to-fast-properties@^1.0.3:
   version "1.0.3"
@@ -7444,10 +7444,10 @@ wrappy@1:
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
-ws@7.4.0:
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.0.tgz#a5dd76a24197940d4a8bb9e0e152bb4503764da7"
-  integrity sha512-kyFwXuV/5ymf+IXhS6f0+eAFvydbaBW3zjpT6hUdAh/hbVjTIB5EHBGi0bPoCLSK2wcuz3BrEkB9LrYv1Nm4NQ==
+ws@7.4.3:
+  version "7.4.3"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.3.tgz#1f9643de34a543b8edb124bdcbc457ae55a6e5cd"
+  integrity sha512-hr6vCR76GsossIRsr8OLR9acVVm1jyfEWvhbNjtgPOrfvAlKzvyeg/P6r8RuDjRyrcQoPQT7K0DGEPc7Ae6jzA==
 
 ws@^6.2.1:
   version "6.2.1"
