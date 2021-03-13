@@ -8,4 +8,14 @@
     'main main main'
     'fl footer fr';
   min-height: 100vh;
+  color: $white;
+  background-color: $dark;
+  transition: background-color 0.5s ease;
+}
+
+[data-theme='light'] {
+  .app {
+    color: $dark;
+    background-color: $lightwhite;
+  }
 }

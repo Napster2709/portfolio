@@ -2,11 +2,9 @@
 
 body {
   font-family: 'Nunito', sans-serif;
-  color: $white;
-  background-color: $dark;
   margin: 0;
   overflow-x: hidden;
-  transition: background-color 0.5s ease;
+  background-color: $dark;
 }
 
 h1,
@@ -35,7 +33,6 @@ p {
 
 [data-theme='light'] {
   body {
-    color: $dark;
     background-color: $lightwhite;
   }
 }

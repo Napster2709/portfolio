@@ -1,18 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './styles.scss';
 import cn from 'classnames';
 import { toggleColorScheme } from 'utils';
 
 const ColorThemeToggle: React.FC = () => {
-  const [done, setDone] = useState<boolean>(false);
-
   const onClickHandler = (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
-    setDone(false);
     toggleColorScheme();
-  };
-
-  const onAnimationEndHandler = () => {
-    setDone(true);
   };
 
   return (
@@ -26,7 +19,6 @@ const ColorThemeToggle: React.FC = () => {
         <circle className={styles.shadow} cx="50" cy="50" r="20" />
         <path
           className={cn(styles._1)}
-          // onAnimationEnd={onAnimationEndHandler}
           d="M 50 75 L 50 75 C 51.38 75 52.5 76.12 52.5 77.5 L 52.5 89.5 C 52.5 90.88 51.38 92 50 92 L 50 92 C 48.62 92 47.5 90.88 47.5 89.5 L 47.5 77.5 C 47.5 76.12 48.62 75 50 75 Z"
         />
         <path

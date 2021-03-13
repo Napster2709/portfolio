@@ -11,16 +11,17 @@ export const detectColorScheme = ({
     : 'light';
   const savedColorScheme = localStorage.getItem('theme');
 
-  if (overwrite || !localStorage.getItem('theme')) {
+  if (overwrite || !savedColorScheme) {
     localStorage.setItem('theme', `${systemColorScheme}`);
+
     document.documentElement.setAttribute('data-theme', `${systemColorScheme}`);
+
+    return systemColorScheme;
   }
 
-  if (localStorage.getItem('theme')) {
-    document.documentElement.setAttribute('data-theme', `${savedColorScheme}`);
-  }
+  document.documentElement.setAttribute('data-theme', `${savedColorScheme}`);
 
-  return systemColorScheme;
+  return savedColorScheme;
 };
 
 export const toggleColorScheme = (): void => {
