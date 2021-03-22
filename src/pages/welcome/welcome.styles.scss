@@ -1,5 +1,11 @@
 @import 'styles/common.scss';
 
+.content {
+  flex-direction: column;
+  position: relative;
+  // top: -50px;
+}
+
 .title {
   font-size: 1rem;
 }
@@ -20,10 +26,4 @@
       animation: slideDown 1s ease;
     }
   }
-}
-
-.content {
-  flex-direction: column;
-  position: relative;
-  // top: -50px;
 }
