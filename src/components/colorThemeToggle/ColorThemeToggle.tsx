@@ -3,13 +3,17 @@ import styles from './styles.scss';
 import cn from 'classnames';
 import { toggleColorScheme } from 'utils';
 
-const ColorThemeToggle: React.FC = () => {
+interface ColorThemeToggleProps {
+  className?: string;
+}
+
+const ColorThemeToggle: React.FC<ColorThemeToggleProps> = ({ className }) => {
   const onClickHandler = (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
     toggleColorScheme();
   };
 
   return (
-    <>
+    <div className={className}>
       <svg
         className={cn(styles.sunMoon)}
         viewBox="0 0 100 100"
@@ -50,7 +54,7 @@ const ColorThemeToggle: React.FC = () => {
           d="M 20.302 79.698 L 20.302 79.698 C 19.326 78.723 19.326 77.139 20.302 76.163 L 28.787 67.678 C 29.762 66.702 31.347 66.702 32.322 67.678 L 32.322 67.678 C 33.298 68.653 33.298 70.238 32.322 71.213 L 23.837 79.698 C 22.861 80.674 21.277 80.674 20.302 79.698 Z"
         />
       </svg>
-    </>
+    </div>
   );
 };
 

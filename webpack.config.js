@@ -122,7 +122,7 @@ module.exports = [
       watchContentBase: true,
       overlay: true,
       historyApiFallback: true,
-      open: true,
+      // open: true,
     },
   },
 ];

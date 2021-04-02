@@ -1,4 +1,4 @@
 export * from './home';
 export * from './notFound';
-export * from './soon';
+export * from './onePager';
 export * from './components';

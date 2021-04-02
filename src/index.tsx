@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Components, Main, PageNotFound, Soon } from './pages';
+import { Components, Main, PageNotFound, OnePager } from './pages';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styles from 'styles/app.scss';
 import './theme/global';
@@ -28,12 +28,11 @@ ReactDOM.render(
     <App>
       <Switch>
         <Route exact path="/">
-          <Main />
-          {/* <Soon /> */}
+          <OnePager />
         </Route>
-        <Route exact path="/soon">
-          <Soon />
-        </Route>
+        {/* <Route exact path="/onepager">
+          <OnePager />
+        </Route> */}
         <Route exact path="/components">
           <Components />
         </Route>

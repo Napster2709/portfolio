@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles.scss';
-import { Huge, Line, Logo, Section } from 'components';
+import {
+  ColorThemeToggle,
+  Huge,
+  Line,
+  Logo,
+  Section,
+  SocialList,
+} from 'components';
 import cn from 'classnames';
 import { writeText } from 'utils';
 
-const Soon = (): React.ReactElement => {
+const OnePager = (): React.ReactElement => {
   const [title, setTitle] = useState<string>('');
 
   useEffect(() => {
@@ -17,15 +24,17 @@ const Soon = (): React.ReactElement => {
 
   return (
     <Section className={styles.height100}>
+      <ColorThemeToggle className={styles.toggle} />
       <div
         className={cn(styles.centered, styles.textAlignCenter, styles.content)}
       >
         <Logo className={cn(styles.logo)} />
         <Line className={cn(styles.slideDown, styles.line)} />
-        <Huge className={cn(styles.title, styles.slideUp)}>{title}</Huge>
+        <h1 className={cn(styles.slideLeft)}>Hi my name is Frederik.</h1>
+        <h2 className={cn(styles.slideRight)}>Software Developer by heart</h2>
       </div>
     </Section>
   );
 };
 
-export { Soon };
+export { OnePager };
