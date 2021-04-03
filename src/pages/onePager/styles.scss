@@ -1,5 +1,12 @@
 @import 'styles/common.scss';
 
+.content {
+  display: grid;
+  place-self: center;
+  flex-direction: column;
+  position: relative;
+}
+
 .logo {
   svg {
     width: 100pt;
@@ -28,21 +35,38 @@
   left: 0.5rem;
 }
 
-.title {
-  font-size: 4rem;
+.titleSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  .line {
+    margin: 0 2rem;
+  }
+
+  .titleText {
+    padding-top: 1.3rem;
+
+    .title {
+      font-size: 4rem;
+      letter-spacing: 1px;
+      color: $lightwhite;
+    }
+
+    .meta {
+      font-size: 2rem;
+      color: $lightwhite;
+      transition: color 0.5s ease;
+    }
+  }
+}
+
+.text {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
   letter-spacing: 1px;
-}
-
-.content {
-  display: grid;
-  place-self: center;
-  flex-direction: column;
-  position: relative;
-  top: -50px;
-}
-
-.line {
-  margin: 0 auto 1rem auto;
+  color: $grey;
+  transition: color 0.5s ease;
 }
 
 [data-theme='light'] {
@@ -50,7 +74,16 @@
     fill: $black;
   }
 
-  .title {
-    color: $black;
+  .text {
+    color: $dark;
+  }
+
+  .titleSection {
+    .titleText {
+      .title,
+      .meta {
+        color: $black;
+      }
+    }
   }
 }

@@ -5,6 +5,14 @@
   justify-content: flex-start;
   transition: transform 0.5s ease;
 
+  &.vertical {
+    .line {
+      background-color: $red;
+      height: 150px;
+      width: 3px;
+    }
+  }
+
   &.center {
     @media all and (min-width: $mobile) {
       justify-content: center;
