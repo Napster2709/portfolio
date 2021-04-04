@@ -14,3 +14,4 @@ export * from './timeline';
 export * from './section';
 export * from './drawing';
 export * from './colorThemeToggle';
+export * from './enumeration';
