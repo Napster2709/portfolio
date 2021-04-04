@@ -27,7 +27,16 @@ const OnePager = (): React.ReactElement => {
           className={cn(styles.text, styles.slideUp, styles.textAlignCenter)}
         >
           I&lsquo;m a Software Developer with a liking in
-          <Enumeration items={['Design', 'Modern Code', 'coffee']} />
+          <Enumeration
+            items={[
+              'Design',
+              'Clean Code',
+              'Modern languages',
+              'coffee',
+              'Gaming',
+              'Music',
+            ]}
+          />
         </div>
       </div>
     </Section>
