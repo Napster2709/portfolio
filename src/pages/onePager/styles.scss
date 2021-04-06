@@ -30,7 +30,7 @@
 }
 
 .toggle {
-  position: fixed;
+  position: absolute;
   top: 2rem;
   left: 0.5rem;
 
@@ -42,7 +42,9 @@
 
 .titleSection {
   display: flex;
-  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 2rem;
 
   .line {
@@ -54,13 +56,21 @@
       animation: draw 2s cubic-bezier(0.38, 0.1, 0, 1.01) forwards;
       animation-delay: 0.4s;
     }
+
+    @media all and (max-width: $mobile) {
+      transform: rotate(90deg);
+      position: absolute;
+      top: 90px;
+      margin: 0;
+    }
   }
 
   .titleText {
-    padding-top: 1.3rem;
+    padding-top: 4rem;
+    text-align: center;
 
     .title {
-      font-size: 4rem;
+      font-size: 3rem;
       letter-spacing: 1px;
       color: $lightwhite;
     }
@@ -79,6 +89,26 @@
   letter-spacing: 1px;
   color: $grey;
   transition: color 0.5s ease;
+}
+
+.list {
+  margin-top: 1rem;
+}
+
+@media all and (min-width: $mobile) {
+  .titleSection {
+    justify-content: center;
+    flex-direction: row;
+
+    .titleText {
+      text-align: left;
+      padding-top: 1.3rem;
+
+      .title {
+        font-size: 4rem;
+      }
+    }
+  }
 }
 
 [data-theme='light'] {

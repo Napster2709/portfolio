@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles.scss';
-
+import cn from 'classnames';
 interface EnumerationProps {
   items: string[];
+  className?: string;
 }
 
-const Enumeration = ({ items }: EnumerationProps): React.ReactElement => {
+const Enumeration = ({
+  items,
+  className,
+}: EnumerationProps): React.ReactElement => {
   const [height, setHeight] = useState<number>(0);
   const [iter, setIter] = useState<number>(0);
   const itemRef = React.createRef<HTMLDivElement>();
@@ -34,16 +38,13 @@ const Enumeration = ({ items }: EnumerationProps): React.ReactElement => {
       : { transform: `translateY(-${height * iter}px)` };
 
   return (
-    <div className={styles.container}>
+    <div className={cn(className, styles.container)}>
       <div className={styles.itemBox} ref={itemRef} style={style}>
-        {items.map(
-          (item, index) =>
-            item && (
-              <div className={styles.item} key={index}>
-                {item}
-              </div>
-            ),
-        )}
+        {items.map((item, index) => (
+          <div className={styles.item} key={index}>
+            {item}
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 
 .app {
   display: grid;
+  position: relative;
   grid-template-columns: 1fr minmax(auto, 1920px) 1fr;
   grid-template-rows: auto 5rem;
   grid-template-areas:

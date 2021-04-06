@@ -28,6 +28,7 @@ const OnePager = (): React.ReactElement => {
         >
           I&lsquo;m a Software Developer with a liking in
           <Enumeration
+            className={styles.list}
             items={[
               'Design',
               'Clean Code',

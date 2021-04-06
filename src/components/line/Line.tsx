@@ -26,7 +26,7 @@ const Line: React.FC<LineProps> = ({
       {svg && (
         <svg
           className={styles.svgLine}
-          xmlns="http://www.w3.org/2000/svg"
+          // xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 60 258"
           fill="none"
         >
