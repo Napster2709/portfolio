@@ -96,8 +96,10 @@ module.exports = [
         template: path.resolve(__dirname, 'src', 'index.html'),
       }),
       new MiniCssExtractPlugin({
-        filename: env === 'development' ? '[name].css' : '[name].[hash].css',
-        chunkFilename: env === 'development' ? '[id].css' : '[id].[hash].css',
+        filename:
+          env === 'development' ? '[name].css' : '[name].[fullhash].css',
+        chunkFilename:
+          env === 'development' ? '[id].css' : '[id].[fullhash].css',
       }),
       new webpack.DefinePlugin({
         'process.env': JSON.stringify(dotenv.parsed),
@@ -110,7 +112,7 @@ module.exports = [
     output: {
       path: path.resolve(__dirname, 'dist'),
       pathinfo: true,
-      filename: 'static/js/bundle.js',
+      filename: 'static/js/[name].bundle.js',
       chunkFilename: 'static/js/[name].chunk.js',
       // publicPath: '/',
     },
