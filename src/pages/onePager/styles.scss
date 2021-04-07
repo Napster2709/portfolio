@@ -1,10 +1,8 @@
 @import 'styles/common.scss';
 
 .content {
-  display: grid;
-  place-self: center;
-  flex-direction: column;
   position: relative;
+  grid-template-rows: 100px 1fr;
 }
 
 .logo {
@@ -29,15 +27,23 @@
   }
 }
 
-.toggle {
-  position: absolute;
-  top: 2rem;
-  left: 0.5rem;
+.toggleContainer {
+  align-self: center;
 
-  svg {
-    width: 30pt;
-    height: 30pt;
+  .toggle {
+    position: relative;
+
+    svg {
+      width: 30pt;
+      height: 30pt;
+    }
   }
+}
+
+.titleContainer {
+  position: relative;
+  align-self: center;
+  top: -2rem;
 }
 
 .titleSection {
