@@ -1,5 +1,139 @@
 @import 'styles/common.scss';
 
-.header-visible {
-  padding-top: 10rem;
+.height100 {
+  .content {
+    position: relative;
+    grid-template-rows: 100px 1fr;
+  }
+}
+
+.logo {
+  svg {
+    width: 100pt;
+    // v
+    :nth-child(1) {
+      animation: slideUp 1s ease;
+    }
+    // k
+    :nth-child(2) {
+      animation: slideLeft 1s ease;
+    }
+    // r
+    :nth-child(3) {
+      animation: slideRight 1s ease;
+    }
+    // f
+    :nth-child(4) {
+      animation: slideDown 1s ease;
+    }
+  }
+}
+
+.toggleContainer {
+  align-self: center;
+
+  .toggle {
+    position: relative;
+
+    svg {
+      width: 30pt;
+      height: 30pt;
+    }
+  }
+}
+
+.titleContainer {
+  position: relative;
+  align-self: center;
+  top: -2rem;
+}
+
+.titleSection {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .line {
+    margin: 0 2rem;
+
+    path {
+      stroke-dasharray: 320;
+      stroke-dashoffset: 320;
+      animation: draw 2s cubic-bezier(0.38, 0.1, 0, 1.01) forwards;
+      animation-delay: 0.4s;
+    }
+
+    @media all and (max-width: $mobile) {
+      transform: rotate(90deg);
+      position: absolute;
+      top: 90px;
+      margin: 0;
+    }
+  }
+
+  .titleText {
+    padding-top: 4rem;
+    text-align: center;
+
+    .title {
+      font-size: 3rem;
+      letter-spacing: 1px;
+      color: $lightwhite;
+    }
+
+    .meta {
+      font-size: 2rem;
+      color: $lightwhite;
+      transition: color 0.5s ease;
+    }
+  }
+}
+
+.text {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 1px;
+  color: $grey;
+  transition: color 0.5s ease;
+}
+
+.list {
+  margin-top: 1rem;
+}
+
+@media all and (min-width: $mobile) {
+  .titleSection {
+    justify-content: center;
+    flex-direction: row;
+
+    .titleText {
+      text-align: left;
+      padding-top: 1.3rem;
+
+      .title {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+[data-theme='light'] {
+  .logo {
+    fill: $dark;
+  }
+
+  .text {
+    color: $dark;
+  }
+
+  .titleSection {
+    .titleText {
+      .title,
+      .meta {
+        color: $dark;
+      }
+    }
+  }
 }
