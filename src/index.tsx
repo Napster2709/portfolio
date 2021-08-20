@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Components, Wrapper, PageNotFound } from './pages';
+import { Components, Wrapper, PageNotFound, Impressum } from './pages';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styles from 'styles/app.scss';
 import './theme/global';
@@ -29,6 +29,9 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/">
           <Wrapper />
+        </Route>
+        <Route exact path="/impressum">
+          <Impressum />
         </Route>
         <Route exact path="/components">
           <Components />

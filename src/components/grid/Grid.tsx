@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.scss';
 import classNames from 'classnames';
+import { withMargin } from 'utils';
 
 interface GridProps {
   children?: React.ReactNode;
@@ -13,6 +14,7 @@ interface GridColumnProps {
   className?: string;
   children?: React.ReactNode;
   cols?: number;
+  style?: unknown;
 }
 
 const Grid = ({
@@ -31,18 +33,16 @@ const Grid = ({
   );
 };
 
-// Grid.Row = ({ children, classname }: any) => {
-//   return <div className={classname}>{children}</div>;
-// };
-
-const Column: React.FC<GridColumnProps> = ({
+const Column = ({
   children,
   cols,
   className,
   centered,
-}) => {
+  style,
+}: GridColumnProps): React.ReactElement => {
   return (
     <div
+      style={style}
       className={classNames(styles.column, className, {
         [styles[`_${cols}`]]: cols,
         [styles.centered]: centered,
@@ -53,10 +53,7 @@ const Column: React.FC<GridColumnProps> = ({
   );
 };
 
-Grid.Column = Column;
-
 Grid.displayName = 'Grid';
-// (Grid.Row as any).displayName = 'Grid';
-(Grid.Column as React.FC<GridColumnProps>).displayName = 'Grid';
+Grid.Column = withMargin<GridColumnProps>(Column);
 
 export { Grid };
