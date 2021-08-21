@@ -1,48 +1,47 @@
 @import 'styles/common.scss';
 
 .header {
-  position: fixed;
+  grid-area: header;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1.2rem 2rem 0;
-  right: 0;
-  left: 0;
-  top: 0;
-  backdrop-filter: blur(20px);
-}
-
-.navigation {
-  height: 100%;
-  width: 50%;
+  justify-content: center;
 }
 
 .logo {
   svg {
-    width: 80pt;
-    height: 80pt;
+    width: 40pt;
+    height: 40pt;
     // v
     :nth-child(1) {
-      animation: slideRight 1s ease forwards;
+      animation: slideDown 1s ease forwards;
       opacity: 0;
       animation-delay: 0.3s;
     }
     // k
     :nth-child(2) {
-      animation: slideRight 1s ease forwards;
+      animation: slideDown 1s ease forwards;
       opacity: 0;
       animation-delay: 0.4s;
     }
     // r
     :nth-child(3) {
-      animation: slideRight 1s ease forwards;
+      animation: slideDown 1s ease forwards;
       opacity: 0;
       animation-delay: 0.2s;
     }
     // f
     :nth-child(4) {
-      animation: slideRight 1s ease forwards;
+      animation: slideDown 1s ease forwards;
       opacity: 0;
     }
+  }
+}
+
+@media all and (min-width: $mobile) {
+  .header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 5rem;
   }
 }

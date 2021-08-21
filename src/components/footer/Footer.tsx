@@ -9,8 +9,9 @@ const Footer: React.FC = () => {
     <div className={styles.footer}>
       <SocialList />
       <div className={styles.copyright}>
+        <div className={styles.text}>Copyright</div>
         <FontAwesomeIcon icon={faCopyright} />
-        <div className={styles.text}>Frederik von Kiedrowski</div>
+        <div className={styles.text}>2020 Frederik von Kiedrowski</div>
       </div>
     </div>
   );

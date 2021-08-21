@@ -4,14 +4,16 @@
   display: grid;
   position: relative;
   grid-template-columns: 1fr minmax(auto, 1920px) 1fr;
-  grid-template-rows: auto 5rem;
+  grid-template-rows: 5rem auto 5rem;
   grid-template-areas:
+    'header header header'
     'main main main'
     'fl footer fr';
   min-height: 100vh;
   color: $white;
   background-color: $dark;
   transition: background-color 0.5s ease;
+  padding: 0 2rem;
 }
 
 [data-theme='light'] {

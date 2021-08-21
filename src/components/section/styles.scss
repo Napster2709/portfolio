@@ -6,11 +6,6 @@
 
   & > * {
     grid-column: 2;
-    padding: 0 2rem;
-  }
-
-  &.fullHeight {
-    min-height: 100vh;
   }
 
   &.fullWidth {

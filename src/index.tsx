@@ -1,23 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Components, Wrapper, PageNotFound, Impressum } from './pages';
+import { Components, PageNotFound, Impressum, Main } from './pages';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styles from 'styles/app.scss';
 import './theme/global';
-import { Footer } from './components/footer';
 import 'assets/favicon.ico';
 import { detectColorScheme } from 'utils';
+import { Footer } from 'components';
 
 interface AppProps {
   children: React.ReactNode;
 }
 
-const App: React.FC<AppProps> = ({ children }) => {
+const App = ({ children }: AppProps): React.ReactElement => {
   detectColorScheme({});
 
   return (
     <div className={styles.app}>
-      <div className={styles.main}>{children}</div>
+      {children}
       <Footer />
     </div>
   );
@@ -28,7 +28,7 @@ ReactDOM.render(
     <App>
       <Switch>
         <Route exact path="/">
-          <Wrapper />
+          <Main />
         </Route>
         <Route exact path="/impressum">
           <Impressum />

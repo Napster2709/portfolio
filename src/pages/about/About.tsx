@@ -7,7 +7,7 @@ import { Grid, Line, Section } from 'components';
 const About = (): React.ReactElement => {
   const context = useContext(MainContext);
   return (
-    <Section fullHeight>
+    <Section>
       <div className={styles.centered}>
         <Grid fluid>
           <Grid.Column cols={5} className={cn(styles.about)}>

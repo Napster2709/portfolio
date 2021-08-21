@@ -5,7 +5,6 @@ import { withMargin } from 'utils';
 
 interface SectionProps {
   fullWidth?: boolean;
-  fullHeight?: boolean;
   children?: React.ReactNode;
   className?: string;
   style?: unknown;
@@ -14,7 +13,6 @@ interface SectionProps {
 export const Section = withMargin<SectionProps>(
   ({
     fullWidth,
-    fullHeight,
     children,
     className,
     style,
@@ -24,7 +22,6 @@ export const Section = withMargin<SectionProps>(
         style={style}
         className={cn(styles.section, className, {
           [styles.fullWidth]: fullWidth,
-          [styles.fullHeight]: fullHeight,
         })}
       >
         {children}

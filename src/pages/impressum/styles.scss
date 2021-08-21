@@ -1,0 +1,11 @@
+@import 'styles/common.scss';
+
+.content {
+  width: 100%;
+}
+
+@media all and (min-width: $mobile) {
+  .content {
+    grid-auto-flow: column;
+  }
+}
