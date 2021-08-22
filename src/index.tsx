@@ -30,7 +30,7 @@ ReactDOM.render(
         <Route exact path="/">
           <Main />
         </Route>
-        <Route exact path="/impressum">
+        <Route exact path="/imprint">
           <Impressum />
         </Route>
         <Route exact path="/components">

@@ -4,6 +4,38 @@
   width: 100%;
 }
 
+.title {
+  width: 100%;
+  text-align: center;
+
+  @media all and (min-width: $mobile) {
+    text-align: right;
+  }
+}
+
+.text {
+  width: 100%;
+  text-align: center;
+
+  @media all and (min-width: $mobile) {
+    text-align: left;
+  }
+}
+
+.line {
+  margin: 0 2rem;
+
+  path {
+    stroke-dasharray: 320;
+    stroke-dashoffset: 320;
+    animation: draw 2s cubic-bezier(0.38, 0.1, 0, 1.01) forwards;
+  }
+
+  @media all and (max-width: $mobile) {
+    transform: rotate(90deg);
+  }
+}
+
 @media all and (min-width: $mobile) {
   .content {
     grid-auto-flow: column;

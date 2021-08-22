@@ -1,0 +1,51 @@
+@import 'styles/common.scss';
+
+.text {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-bottom: 0.2rem;
+
+  &::before {
+    @include font-p();
+  }
+
+  &.name {
+    &::before {
+      content: '\46\72\65\64\65\72\69\6b\20\52\2e\20\76\6f\6e\20\4b\69\65\64\72\6f\77\73\6b\69';
+    }
+  }
+
+  &.email {
+    &::before {
+      content: '\69\6e\66\6f\40\66\72\76\6b\2e\64\65\76';
+    }
+  }
+
+  &.street {
+    &::before {
+      content: '\53\69\65\67\74\61\6c\73\74\72\61\df\65\20\39';
+    }
+  }
+
+  &.city {
+    &::before {
+      content: '\35\37\30\38\30\20\53\69\65\67\65\6e';
+    }
+  }
+
+  &.land {
+    &::before {
+      content: '\47\65\72\6d\61\6e\79';
+    }
+  }
+}
+
+[data-theme='light'] {
+  .text::before {
+    color: $dark;
+  }
+}

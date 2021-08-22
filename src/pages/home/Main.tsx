@@ -61,4 +61,6 @@ const Main = ({ className }: MainProps): React.ReactElement => {
   );
 };
 
+Main.displayName = 'Main';
+
 export { Main };

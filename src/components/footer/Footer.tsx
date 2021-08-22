@@ -3,12 +3,16 @@ import styles from './styles.scss';
 import { SocialList } from 'components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
     <div className={styles.footer}>
       <SocialList />
       <div className={styles.copyright}>
+        <div className={styles.link}>
+          <Link to="/imprint">Imprint</Link>
+        </div>
         <div className={styles.text}>Copyright</div>
         <FontAwesomeIcon icon={faCopyright} />
         <div className={styles.text}>2020 Frederik von Kiedrowski</div>

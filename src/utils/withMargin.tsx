@@ -1,11 +1,11 @@
 import React from 'react';
 
 interface WithMarginProps {
-  marginTop?: number;
-  marginBottom?: number;
-  marginLeft?: number;
-  marginRight?: number;
-  margin?: number;
+  marginTop?: string;
+  marginBottom?: string;
+  marginLeft?: string;
+  marginRight?: string;
+  margin?: string;
 }
 
 export const withMargin = <T extends unknown>(
@@ -19,25 +19,25 @@ export const withMargin = <T extends unknown>(
     const { marginTop, marginBottom, marginLeft, marginRight, margin } = props;
 
     if (marginTop) {
-      s = { ...s, 'margin-top': marginTop };
+      s = { ...s, marginTop };
     }
     if (marginBottom) {
-      s = { ...s, 'margin-bottom': marginBottom };
+      s = { ...s, marginBottom };
     }
     if (marginLeft) {
-      s = { ...s, 'margin-left': marginLeft };
+      s = { ...s, marginLeft };
     }
     if (marginRight) {
-      s = { ...s, 'margin-right': marginRight };
+      s = { ...s, marginRight };
     }
     if (margin) {
-      s = { ...s, margin: margin };
+      s = { ...s, margin };
     }
 
     return <WrappedComponent {...(props as T)} style={s} />;
   };
 
-  ComponentWithMargin.displayName = `withTheme(${displayName})`;
+  ComponentWithMargin.displayName = `withMargin(${displayName})`;
 
   return ComponentWithMargin;
 };

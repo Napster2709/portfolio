@@ -15,3 +15,5 @@ export * from './section';
 export * from './drawing';
 export * from './colorThemeToggle';
 export * from './enumeration';
+export * from './modal';
+export * from './privatText';

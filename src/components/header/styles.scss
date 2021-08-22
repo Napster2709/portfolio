@@ -5,6 +5,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media all and (min-width: $mobile) {
+    position: fixed;
+    left: 2rem;
+    right: 2rem;
+    height: 5rem;
+  }
+}
+
+.content {
+  width: 100%;
+
+  .toggle {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .logo {
@@ -34,14 +50,5 @@
       animation: slideDown 1s ease forwards;
       opacity: 0;
     }
-  }
-}
-
-@media all and (min-width: $mobile) {
-  .header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 5rem;
   }
 }

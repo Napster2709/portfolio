@@ -1,4 +1,4 @@
-import { Grid, Header, Line, Section } from 'components';
+import { Grid, Header, Line, PrivatText, Section } from 'components';
 import React from 'react';
 import styles from './styles.scss';
 import cn from 'classnames';
@@ -8,37 +8,28 @@ const Impressum = (): React.ReactElement => {
     <>
       <Header />
       <div className={styles.main}>
-        <Section>
+        <Section marginTop="15%">
           <Grid fluid>
-            <Grid.Column cols={5} centered className={styles.content}>
-              <h1 className={cn(styles.title, styles.slideLeft)}>Impressum</h1>
-              <Line svg />
+            <Grid.Column centered cols={5} className={styles.content}>
+              <h1 className={cn(styles.title, styles.slideLeft)}>Imprint</h1>
+            </Grid.Column>
+            <Grid.Column centered cols={2}>
+              <Line svg className={styles.line} />
             </Grid.Column>
             <Grid.Column
-              cols={7}
+              cols={5}
               centered
-              className={cn(styles.text, styles.slideRight)}
+              className={cn(styles.content, styles.slideRight)}
             >
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                distinctio sapiente possimus esse eius voluptates rerum optio
-                unde, deserunt in. Veniam, amet? Illum ducimus praesentium
-                placeat explicabo itaque unde reprehenderit. Lorem, ipsum dolor
-                sit amet consectetur adipisicing elit. Dicta distinctio sapiente
-                possimus esse eius voluptates rerum optio unde, deserunt in.
-                Veniam, amet? Illum ducimus praesentium placeat explicabo itaque
-                unde reprehenderit. Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Dicta distinctio sapiente possimus esse eius
-                voluptates rerum optio unde, deserunt in. Veniam, amet? Illum
-                ducimus praesentium placeat explicabo itaque unde reprehenderit.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                distinctio sapiente possimus esse eius voluptates rerum optio
-                unde, deserunt in. Veniam, amet? Illum ducimus praesentium
-                placeat explicabo itaque unde reprehenderit. Lorem, ipsum dolor
-                sit amet consectetur adipisicing elit. Dicta distinctio sapiente
-                possimus esse eius voluptates rerum optio unde, deserunt in.
-                Veniam, amet?
-              </p>
+              <div className={styles.text}>
+                <h3>Contact</h3>
+                <PrivatText type="name" />
+                <PrivatText type="email" />
+                <h3>Address</h3>
+                <PrivatText type="street" />
+                <PrivatText type="city" />
+                <PrivatText type="land" />
+              </div>
             </Grid.Column>
           </Grid>
         </Section>

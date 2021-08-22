@@ -10,7 +10,7 @@ interface SectionProps {
   style?: unknown;
 }
 
-export const Section = withMargin<SectionProps>(
+const Section = withMargin<SectionProps>(
   ({
     fullWidth,
     children,
@@ -29,3 +29,7 @@ export const Section = withMargin<SectionProps>(
     );
   },
 );
+
+Section.displayName = 'Section';
+
+export { Section };
