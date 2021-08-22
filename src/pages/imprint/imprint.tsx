@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './styles.scss';
 import cn from 'classnames';
 
-const Impressum = (): React.ReactElement => {
+const Imprint = (): React.ReactElement => {
   return (
     <>
       <Header logo back="/" />
@@ -18,7 +18,6 @@ const Impressum = (): React.ReactElement => {
             </Grid.Column>
             <Grid.Column
               cols={5}
-              centered
               className={cn(styles.content, styles.slideRight)}
             >
               <div className={styles.text}>
@@ -38,4 +37,4 @@ const Impressum = (): React.ReactElement => {
   );
 };
 
-export { Impressum };
+export { Imprint };

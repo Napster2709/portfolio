@@ -21,8 +21,17 @@
   justify-content: space-between;
 
   .toggle {
+    width: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  .back {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
