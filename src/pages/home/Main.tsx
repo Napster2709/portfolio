@@ -4,6 +4,7 @@ import {
   ColorThemeToggle,
   Enumeration,
   Grid,
+  Header,
   Huge,
   Line,
   Logo,
@@ -18,9 +19,7 @@ interface MainProps {
 const Main = ({ className }: MainProps): React.ReactElement => {
   return (
     <>
-      <div className={cn(styles.header, styles.alignSelf)}>
-        <ColorThemeToggle />
-      </div>
+      <Header />
       <div className={styles.main}>
         <Section className={cn(className, styles.height100)}>
           <Grid className={cn(styles.content)}>

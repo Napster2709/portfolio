@@ -17,3 +17,4 @@ export * from './colorThemeToggle';
 export * from './enumeration';
 export * from './modal';
 export * from './privatText';
+export * from './backArrow';

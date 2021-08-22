@@ -6,9 +6,9 @@ import cn from 'classnames';
 const Impressum = (): React.ReactElement => {
   return (
     <>
-      <Header />
+      <Header logo back="/" />
       <div className={styles.main}>
-        <Section marginTop="15%">
+        <Section marginTop="12%">
           <Grid fluid>
             <Grid.Column centered cols={5} className={styles.content}>
               <h1 className={cn(styles.title, styles.slideLeft)}>Imprint</h1>
