@@ -6,33 +6,30 @@
   align-items: center;
   justify-content: center;
 
-  @media all and (min-width: $mobile) {
-    position: fixed;
-    left: 2rem;
-    right: 2rem;
-    height: 5rem;
-  }
+  // @media all and (min-width: $mobile) {
+  //   position: fixed;
+  //   left: 2rem;
+  //   right: 2rem;
+  //   height: 5rem;
+  // }
+}
+
+.toggle {
+  grid-area: toggle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back {
+  grid-area: back;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  .toggle {
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .back {
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 .logo {

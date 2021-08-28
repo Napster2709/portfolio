@@ -2,6 +2,15 @@
 
 .content {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .title {
@@ -17,8 +26,16 @@
   width: 100%;
   text-align: center;
 
+  hr {
+    margin: 0.5rem auto;
+  }
+
   @media all and (min-width: $mobile) {
     text-align: left;
+
+    hr {
+      margin: 0.5rem 0;
+    }
   }
 }
 
@@ -33,6 +50,28 @@
 
   @media all and (max-width: $mobile) {
     transform: rotate(90deg);
+  }
+}
+
+.line2 {
+  margin: 0 2rem;
+  transform: rotateY(180deg) rotateZ(180deg);
+
+  path {
+    stroke-dasharray: 320;
+    stroke-dashoffset: 320;
+    animation: draw 2s cubic-bezier(0.38, 0.1, 0, 1.01) forwards;
+  }
+
+  @media all and (max-width: $mobile) {
+    transform: rotateZ(-90deg);
+  }
+}
+
+@media all and (max-width: $mobile) {
+  .address {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 

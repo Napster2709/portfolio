@@ -3,12 +3,12 @@
 .app {
   display: grid;
   position: relative;
-  grid-template-columns: 1fr minmax(auto, 1920px) 1fr;
+  grid-template-columns: 30px minmax(auto, 1920px) 30px;
   grid-template-rows: 5rem auto 5rem;
   grid-template-areas:
-    'header header header'
+    'back header toggle'
     'main main main'
-    'fl footer fr';
+    'footer footer footer';
   min-height: 100vh;
   color: $white;
   background-color: $dark;

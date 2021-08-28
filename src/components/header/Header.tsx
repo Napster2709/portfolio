@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
-import { MainContext, steps } from 'utils';
+import React from 'react';
 import { Logo } from '../logo';
 import styles from './styles.scss';
 import cn from 'classnames';
-import { BackArrow, ColorThemeToggle } from 'components';
+import { BackArrow, ColorThemeToggle, Grid } from 'components';
 import { Link } from 'react-router-dom';
 
 interface HeaderProps {
@@ -12,29 +11,28 @@ interface HeaderProps {
 }
 
 const Header = ({ logo, back }: HeaderProps): React.ReactElement => {
-  const context = useContext(MainContext);
   return (
-    context.currentStep != steps.welcome && (
+    <>
+      {back && (
+        <div className={styles.back}>
+          <BackArrow to={back} />
+        </div>
+      )}
       <div className={cn(styles.header, styles.fadeIn)}>
-        <div className={styles.content}>
-          {back && (
-            <div className={styles.back}>
-              <BackArrow to={back} />
-            </div>
-          )}
+        <Grid className={styles.content}>
           {logo && (
-            <div>
+            <Grid.Column centered>
               <Link to="/">
                 <Logo className={styles.logo} />
               </Link>
-            </div>
+            </Grid.Column>
           )}
-          <div className={styles.toggle}>
-            <ColorThemeToggle />
-          </div>
-        </div>
+        </Grid>
       </div>
-    )
+      <div className={styles.toggle}>
+        <ColorThemeToggle />
+      </div>
+    </>
   );
 };
 

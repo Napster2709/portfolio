@@ -7,6 +7,16 @@ body {
   background-color: $dark;
 }
 
+hr {
+  all: unset;
+  height: 3px;
+  background-color: $grey;
+  width: 100%;
+  max-width: 100px;
+  display: block;
+  margin: 0.5rem 0;
+}
+
 h1,
 h2,
 h3,
