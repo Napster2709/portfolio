@@ -1,82 +1,51 @@
 @import 'styles/common.scss';
 
 .content {
-  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
 .main {
+  max-width: 300px;
   display: flex;
-  justify-content: center;
+  margin: 4rem auto;
   flex-direction: column;
 }
 
-.title {
-  width: 100%;
-  text-align: center;
+.box {
+  position: relative;
+  background-color: $lightdark;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  transition: background-color 0.5s ease;
 
-  @media all and (min-width: $mobile) {
-    text-align: right;
+  &::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 80%;
+    bottom: -15px;
+    left: 80%;
+    right: -15px;
+    border-bottom-right-radius: 2rem;
+    border-right: 5px solid $blue;
+    border-bottom: 5px solid $blue;
+  }
+
+  h2 {
+    margin-top: 0;
   }
 }
 
-.text {
-  width: 100%;
-  text-align: center;
-
-  hr {
-    margin: 0.5rem auto;
-  }
-
-  @media all and (min-width: $mobile) {
-    text-align: left;
-
-    hr {
-      margin: 0.5rem 0;
-    }
-  }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.line {
-  margin: 0 2rem;
-
-  path {
-    stroke-dasharray: 320;
-    stroke-dashoffset: 320;
-    animation: draw 2s cubic-bezier(0.38, 0.1, 0, 1.01) forwards;
-  }
-
-  @media all and (max-width: $mobile) {
-    transform: rotate(90deg);
-  }
-}
-
-.line2 {
-  margin: 0 2rem;
-  transform: rotateY(180deg) rotateZ(180deg);
-
-  path {
-    stroke-dasharray: 320;
-    stroke-dashoffset: 320;
-    animation: draw 2s cubic-bezier(0.38, 0.1, 0, 1.01) forwards;
-  }
-
-  @media all and (max-width: $mobile) {
-    transform: rotateZ(-90deg);
-  }
-}
-
-@media all and (max-width: $mobile) {
-  .address {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-}
-
-@media all and (min-width: $mobile) {
-  .content {
-    grid-auto-flow: column;
+[data-theme='light'] {
+  .box {
+    background-color: $grey;
   }
 }

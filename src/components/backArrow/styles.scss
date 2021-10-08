@@ -1,7 +1,7 @@
 @import 'styles/common.scss';
 
 $height: 2px;
-$arrowColor: $lightwhite;
+$arrowColor: $red;
 $deplay: 0.3s;
 $duration: 0.5s;
 
@@ -56,11 +56,11 @@ $duration: 0.5s;
   .arrow {
     .inner {
       &::after {
-        background-color: $dark;
+        background-color: $red;
       }
 
       &::before {
-        background-color: $dark;
+        background-color: $red;
       }
     }
   }
