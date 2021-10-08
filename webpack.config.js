@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
@@ -129,14 +131,20 @@ module.exports = [
       // publicPath: '/',
     },
     devServer: {
-      contentBase: path.join(__dirname, 'dist'),
-      clientLogLevel: 'info',
+      client: {
+        overlay: true,
+        progress: true,
+      },
+      static: {
+        directory: path.join(__dirname, 'dist'),
+      },
+      // contentBase: path.join(__dirname, 'dist'),
+      // clientLogLevel: 'info',
       compress: true,
       port: 8080,
-      watchContentBase: true,
-      overlay: true,
+      // watchContentBase: true,
       historyApiFallback: true,
-      // open: true,
+      open: true,
     },
   },
 ];
