@@ -128,7 +128,6 @@ module.exports = [
       pathinfo: true,
       filename: 'static/js/[name].bundle.js',
       chunkFilename: 'static/js/[name].chunk.js',
-      // publicPath: '/',
     },
     devServer: {
       client: {
@@ -138,11 +137,8 @@ module.exports = [
       static: {
         directory: path.join(__dirname, 'dist'),
       },
-      // contentBase: path.join(__dirname, 'dist'),
-      // clientLogLevel: 'info',
       compress: true,
       port: 8080,
-      // watchContentBase: true,
       historyApiFallback: true,
       open: true,
     },

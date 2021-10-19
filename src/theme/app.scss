@@ -3,6 +3,8 @@
 .app {
   display: grid;
   position: relative;
+  box-sizing: border-box;
+  place-self: center;
   grid-template-columns: 30px minmax(auto, 1920px) 30px;
   grid-template-rows: 5rem auto 5rem;
   grid-template-areas:

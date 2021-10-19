@@ -7,6 +7,10 @@ body {
   background-color: $dark;
 }
 
+:global(#root) {
+  display: grid;
+}
+
 hr {
   all: unset;
   height: 3px;
