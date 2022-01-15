@@ -16,7 +16,7 @@ $distance: 1rem;
   }
 
   .shadow {
-    clip-path: circle(18px at 32px 14px);
+    clip-path: circle(18px at 55px 38px);
     will-change: clip-path;
     fill: $dark;
     transition: clip-path 0.5s ease, fill 0.5s ease;
