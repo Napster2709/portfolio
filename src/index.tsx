@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Components, PageNotFound, Main, Imprint } from './pages';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import styles from 'styles/app.scss';
 import './theme/global';
 import 'assets/favicon.ico';
@@ -26,20 +26,12 @@ const App = ({ children }: AppProps): React.ReactElement => {
 ReactDOM.render(
   <Router>
     <App>
-      <Switch>
-        <Route exact path="/">
-          <Main />
-        </Route>
-        <Route exact path="/imprint">
-          <Imprint />
-        </Route>
-        <Route exact path="/components">
-          <Components />
-        </Route>
-        <Route path="*">
-          <PageNotFound />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route index element={<Main />} />
+        <Route element={<Imprint />} path="imprint" />
+        <Route element={<Components />} path="components" />
+        <Route element={<PageNotFound />} path="*" />
+      </Routes>
     </App>
   </Router>,
   document.getElementById('root'),
