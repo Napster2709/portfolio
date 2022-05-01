@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Components, PageNotFound, Main, Imprint } from './pages';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import styles from 'styles/app.scss';
@@ -23,7 +23,10 @@ const App = ({ children }: AppProps): React.ReactElement => {
   );
 };
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
   <Router>
     <App>
       <Routes>
@@ -34,5 +37,4 @@ ReactDOM.render(
       </Routes>
     </App>
   </Router>,
-  document.getElementById('root'),
 );
