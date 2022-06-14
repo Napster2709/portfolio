@@ -30,7 +30,7 @@ const Main = ({ className }: MainProps): React.ReactElement => {
                 <Logo className={cn(styles.logo)} />
                 <Line svg className={cn(styles.line)} />
                 <div className={cn(styles.titleText, styles.slideRight)}>
-                  <div className={styles.meta}>Hello</div>
+                  <div className={styles.meta}>Hey,</div>
                   <Huge className={styles.title}>I&lsquo;m Freddy</Huge>
                 </div>
               </div>
