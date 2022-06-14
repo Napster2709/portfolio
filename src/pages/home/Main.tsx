@@ -9,6 +9,8 @@ import {
   Line,
   Logo,
   Section,
+  SocialList,
+  Status,
 } from 'components';
 import cn from 'classnames';
 
@@ -29,7 +31,7 @@ const Main = ({ className }: MainProps): React.ReactElement => {
                 <Line svg className={cn(styles.line)} />
                 <div className={cn(styles.titleText, styles.slideRight)}>
                   <div className={styles.meta}>Hello</div>
-                  <Huge className={styles.title}>I&lsquo;m Frederik</Huge>
+                  <Huge className={styles.title}>I&lsquo;m Freddy</Huge>
                 </div>
               </div>
               <div
@@ -39,7 +41,7 @@ const Main = ({ className }: MainProps): React.ReactElement => {
                   styles.textAlignCenter,
                 )}
               >
-                I&lsquo;m a Software Developer with a liking in
+                I&lsquo;m have a liking in
                 <Enumeration
                   className={styles.list}
                   items={[
@@ -52,6 +54,17 @@ const Main = ({ className }: MainProps): React.ReactElement => {
                   ]}
                 />
               </div>
+              <Grid.Column
+                className={styles.slideDown}
+                marginBottom="2rem"
+                marginTop="8rem"
+              >
+                <Status
+                  role="Senior Software Engineer"
+                  status="Employed"
+                  company="Avenga Germany"
+                />
+              </Grid.Column>
             </Grid.Column>
           </Grid>
         </Section>

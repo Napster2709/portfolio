@@ -6,6 +6,8 @@ import { faCopyright } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className={styles.footer}>
       <SocialList />
@@ -15,7 +17,9 @@ const Footer: React.FC = () => {
         </div>
         <div className={styles.text}>Copyright</div>
         <FontAwesomeIcon icon={faCopyright} />
-        <div className={styles.text}>2020 Frederik von Kiedrowski</div>
+        <div className={styles.text}>
+          <>{currentYear} Frederik von Kiedrowski</>
+        </div>
       </div>
     </div>
   );

@@ -19,3 +19,4 @@ export * from './modal';
 export * from './privatText';
 export * from './backArrow';
 export * from './icons';
+export * from './status';
