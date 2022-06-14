@@ -1,5 +1,7 @@
 # portfolio
 
+[![CI](https://github.com/Napster2709/portfolio/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/Napster2709/portfolio/actions/workflows/ci.yml)
+
 Welcome to this react based portfolio of Frederik von Kiedrowski.
 
 ## Initial Setup

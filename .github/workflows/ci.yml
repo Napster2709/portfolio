@@ -4,7 +4,7 @@ on:
     branches: ['master']
 jobs:
   build:
-    name: Test
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -13,4 +13,4 @@ jobs:
           cmd: install # will run `yarn install` command
       - uses: borales/actions-yarn@v3.0.0
         with:
-          cmd: build-production # will run `yarn build` command
+          cmd: build-production # will run `yarn build-production` command
