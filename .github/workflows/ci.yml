@@ -8,9 +8,41 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v3.0.0
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore yarn cache
+        uses: actions/cache@v2
+        id: yarn-cache
         with:
-          cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v3.0.0
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: yarn install
+      - name: Build
+        run: yarn run build-production
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@master
         with:
-          cmd: build-production # will run `yarn build-production` command
+          name: dist
+          path: dist
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: dist
+          path: dist
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
