@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './styles.scss';
 import {
-  ColorThemeToggle,
   Enumeration,
   Grid,
   Header,
@@ -9,10 +8,18 @@ import {
   Line,
   Logo,
   Section,
-  SocialList,
   Status,
 } from 'components';
 import cn from 'classnames';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChessRook } from '@fortawesome/free-regular-svg-icons';
+import {
+  faCompassDrafting,
+  faMugSaucer,
+  faCodeMerge,
+  faMusic,
+  faCode,
+} from '@fortawesome/free-solid-svg-icons';
 
 interface MainProps {
   className?: string;
@@ -34,23 +41,48 @@ const Main = ({ className }: MainProps): React.ReactElement => {
                   <Huge className={styles.title}>I&lsquo;m Freddy</Huge>
                 </div>
               </div>
-              <div
-                className={cn(
-                  styles.text,
-                  styles.slideUp,
-                  styles.textAlignCenter,
-                )}
-              >
-                I&lsquo;m have a liking in
+              <div className={cn(styles.passion, styles.slideUp)}>
+                <div className={styles.text}>I&apos;m passionate about</div>
                 <Enumeration
                   className={styles.list}
+                  activeClassName={styles.active}
                   items={[
-                    'Design',
-                    'Clean Code',
-                    'Modern languages',
-                    'coffee',
-                    'Gaming',
-                    'Music',
+                    <>
+                      <div className={styles.itemText}>Design</div>{' '}
+                      <FontAwesomeIcon
+                        className={styles.icon}
+                        icon={faCompassDrafting}
+                      />{' '}
+                    </>,
+                    <>
+                      <div className={styles.itemText}>Clean Code</div>{' '}
+                      <FontAwesomeIcon
+                        className={styles.icon}
+                        icon={faCodeMerge}
+                      />
+                    </>,
+                    <>
+                      <div className={styles.itemText}>Modern languages</div>{' '}
+                      <FontAwesomeIcon className={styles.icon} icon={faCode} />
+                    </>,
+                    <>
+                      <div className={styles.itemText}>coffee</div>{' '}
+                      <FontAwesomeIcon
+                        className={styles.icon}
+                        icon={faMugSaucer}
+                      />
+                    </>,
+                    <>
+                      <div className={styles.itemText}>Gaming</div>{' '}
+                      <FontAwesomeIcon
+                        className={styles.icon}
+                        icon={faChessRook}
+                      />
+                    </>,
+                    <>
+                      <div className={styles.itemText}>Music</div>{' '}
+                      <FontAwesomeIcon className={styles.icon} icon={faMusic} />
+                    </>,
                   ]}
                 />
               </div>

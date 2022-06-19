@@ -13,7 +13,7 @@ const ColorThemeToggle: React.FC<ColorThemeToggleProps> = ({ className }) => {
   };
 
   return (
-    <div className={className}>
+    <div className={cn(styles.wrapper, className)}>
       <svg
         className={cn(styles.sunMoon)}
         viewBox="0 0 100 100"

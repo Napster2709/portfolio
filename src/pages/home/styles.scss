@@ -78,6 +78,15 @@
   }
 }
 
+.passion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
 .text {
   font-size: 1.5rem;
   line-height: 2.5rem;
@@ -87,7 +96,20 @@
 }
 
 .list {
-  margin-top: 1rem;
+  .itemText {
+    color: $lightwhite;
+    transition: color 0.5s ease;
+  }
+
+  .icon {
+    color: $green;
+  }
+
+  .active {
+    .icon {
+      animation: slideLeft 0.6s ease;
+    }
+  }
 }
 
 @media all and (min-width: $mobile) {
@@ -104,6 +126,11 @@
       }
     }
   }
+
+  .passion {
+    gap: 2rem;
+    flex-direction: row;
+  }
 }
 
 [data-theme='light'] {
@@ -113,6 +140,10 @@
 
   .text {
     color: $dark;
+  }
+
+  .itemText {
+    color: $lightdark;
   }
 
   .titleSection {

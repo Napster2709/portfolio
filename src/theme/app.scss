@@ -6,7 +6,7 @@
   box-sizing: border-box;
   place-self: center;
   grid-template-columns: 30px minmax(auto, 1920px) 30px;
-  grid-template-rows: 5rem auto 5rem;
+  grid-template-rows: 5rem auto 8rem;
   grid-template-areas:
     'back header toggle'
     'main main main'
@@ -16,6 +16,12 @@
   background-color: $dark;
   transition: background-color 0.5s ease;
   padding: 0 2rem;
+}
+
+@media all and (min-width: $mobile) {
+  .app {
+    grid-template-rows: 5rem auto 5rem;
+  }
 }
 
 [data-theme='light'] {

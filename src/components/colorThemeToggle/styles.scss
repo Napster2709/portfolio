@@ -3,6 +3,28 @@
 $rays: 9;
 $distance: 1rem;
 
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transform: scale(0);
+    background-color: $lightwhite;
+    pointer-events: none;
+    opacity: 1;
+    z-index: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}
+
 .sunMoon {
   width: 30pt;
   height: 30pt;
@@ -25,16 +47,16 @@ $distance: 1rem;
   path {
     opacity: 0;
     transition: opacity 0.5s ease;
-    // @for $ray from 1 to $rays {
-    //   &._#{$ray} {
-    //     opacity: 0;
-    //     transition: opacity 0.5s ease;
-    //   }
-    // }
   }
 }
 
 [data-theme='light'] {
+  .wrapper {
+    &::after {
+      transform: scale(5);
+      opacity: 0;
+    }
+  }
   .sunMoon {
     fill: $dark;
     transform: rotate(100deg);

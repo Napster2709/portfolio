@@ -3,19 +3,19 @@
 .container {
   height: 2.5rem;
   overflow: hidden;
+}
 
-  .itemBox {
-    display: flex;
-    flex-direction: column;
-    // transition: transform 0.5s cubic-bezier(0.78, 0.2, 0.15, 1.01);
-  }
+.itemBox {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
 
-  .item {
-    font-size: 1.5rem;
-    color: $red;
-
-    &:nth-child(even) {
-      color: $blue;
-    }
-  }
+.item {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  line-height: 2.5rem;
+  letter-spacing: 1px;
+  gap: 2rem;
 }

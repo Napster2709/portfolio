@@ -15,9 +15,9 @@ const Footer: React.FC = () => {
         <div className={styles.link}>
           <Link to="/imprint">Imprint</Link>
         </div>
-        <div className={styles.text}>Copyright</div>
-        <FontAwesomeIcon icon={faCopyright} />
         <div className={styles.text}>
+          <FontAwesomeIcon icon={faCopyright} />
+          <>Copyright </>
           <>{currentYear} Frederik von Kiedrowski</>
         </div>
       </div>

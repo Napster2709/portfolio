@@ -6,7 +6,6 @@ import {
   faStackOverflow,
   faGithubAlt,
 } from '@fortawesome/free-brands-svg-icons';
-import { ColorThemeToggle } from 'components';
 
 const SocialList = (): React.ReactElement => {
   return (
