@@ -44,6 +44,10 @@
 
   .line {
     margin: 0 2rem;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 90px;
+    margin: 0;
 
     path {
       stroke-dasharray: 320;
@@ -52,11 +56,11 @@
       animation-delay: 0.4s;
     }
 
-    @media all and (max-width: $mobile) {
-      transform: rotate(90deg);
-      position: absolute;
-      top: 90px;
-      margin: 0;
+    @media all and (min-width: $mobile) {
+      margin: 0 2rem;
+      transform: rotate(0);
+      position: relative;
+      top: 0;
     }
   }
 

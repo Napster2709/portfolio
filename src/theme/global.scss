@@ -10,6 +10,7 @@ body {
 
 :global(#root) {
   display: grid;
+  overflow-x: hidden;
 }
 
 * {
