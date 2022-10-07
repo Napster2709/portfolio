@@ -33,6 +33,7 @@ $line: 3px;
         width: 100%;
         min-height: 4rem;
         padding: 1rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
 
         &::after {
           content: '';
@@ -42,11 +43,11 @@ $line: 3px;
           right: -0.6rem;
           height: 0;
           width: 0;
-          // background-color: $lightdark;
           border-top: 0.6rem solid transparent;
           border-bottom: 0.6rem solid transparent;
-
           border-left: 0.6rem solid $lightdark;
+
+          transition: border-color 0.3s ease;
         }
       }
     }
@@ -73,6 +74,7 @@ $line: 3px;
     .date {
       grid-area: date;
       place-self: start left;
+      transition: color 0.3s ease;
     }
 
     &:nth-child(even) {
@@ -96,6 +98,28 @@ $line: 3px;
 
       .date {
         place-self: start right;
+      }
+    }
+  }
+}
+
+[data-theme='light'] {
+  .timeline {
+    .row {
+      .content {
+        .bubble {
+          background-color: $white;
+
+          &::after {
+            border-left-color: $white;
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        .bubble::after {
+          border-right-color: $white;
+        }
       }
     }
   }

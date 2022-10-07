@@ -30,7 +30,14 @@ root.render(
   <Router>
     <App>
       <Routes>
-        <Route index element={<Main />} />
+        <Route
+          index
+          element={
+            <>
+              <Main />
+            </>
+          }
+        />
         <Route element={<Imprint />} path="imprint" />
         <Route element={<Components />} path="components" />
         <Route element={<PageNotFound />} path="*" />
