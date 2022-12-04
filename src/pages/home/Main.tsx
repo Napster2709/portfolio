@@ -92,9 +92,9 @@ const Main = ({ className }: MainProps): React.ReactElement => {
                 marginTop="8rem"
               >
                 <Status
-                  role="Senior Software Engineer"
+                  role="Software Engineer"
                   status="Employed"
-                  company="Avenga Germany"
+                  company="Adesso SE"
                 />
               </Grid.Column>
             </Grid.Column>
