@@ -1,6 +1,7 @@
 @import 'styles/common.scss';
 
-.height100 {
+.fullSize {
+  min-height: 88vh;
   .content {
     position: relative;
     grid-template-rows: 1fr;
