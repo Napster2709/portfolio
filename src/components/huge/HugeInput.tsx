@@ -1,6 +1,6 @@
 import React, { useState, createRef, useEffect } from 'react';
-import styles from './styles.input.scss';
-import { sleep, writeText } from 'utils';
+import s from './styles.input.scss';
+import { writeText } from 'utils';
 import { TextInput } from '../textInput';
 import textJson from './texts.json';
 
@@ -95,7 +95,7 @@ const HugeInput: React.FC<HugeInputProps> = ({ value }) => {
   return (
     <TextInput
       inputRef={inputRef}
-      className={styles.hugeInput}
+      className={s.hugeInput}
       value={inputValue}
       onChange={changeHandler}
       disabled={disabled}

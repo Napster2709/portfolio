@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './styles.scss';
+import s from './styles.scss';
 
 interface BackArrowProps {
   to: string;
@@ -9,8 +9,8 @@ interface BackArrowProps {
 const BackArrow = ({ to }: BackArrowProps): React.ReactElement => {
   return (
     <Link to={to}>
-      <div className={styles.arrow}>
-        <div className={styles.inner}></div>
+      <div className={s.arrow}>
+        <div className={s.inner}></div>
       </div>
     </Link>
   );

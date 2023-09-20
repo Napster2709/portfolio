@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.scss';
+import s from './styles.scss';
 import cn from 'classnames';
 
 interface LogoProps {
@@ -8,7 +8,7 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ className }) => {
   return (
-    <div className={cn(styles.logo, className)}>
+    <div className={cn(s.logo, className)}>
       <svg viewBox="0 0 150 110" width="150pt" height="110pt">
         <path d=" M 41.253 65.357 L 69.549 109.004 L 90.263 109.004 L 90.263 80.522 L 75.467 67.206 L 75.467 91.249 L 58.221 65.357 L 41.253 65.357 Z " />
         <path d=" M 75.467 61.75 L 89.864 75.327 L 127.899 109.004 L 150 109.004 L 96.181 57.219 L 150 0.996 L 127.668 0.996 L 89.916 40.944 L 90.263 0.996 L 75.467 0.996 L 75.467 61.75 Z " />

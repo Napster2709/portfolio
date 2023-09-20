@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.scss';
+import s from './styles.scss';
 import classNames from 'classnames';
 import { withMargin } from 'utils';
 
@@ -24,8 +24,8 @@ const Grid = ({
 }: GridProps): React.ReactElement => {
   return (
     <div
-      className={classNames(styles.container, className, {
-        [styles.fluid]: fluid,
+      className={classNames(s.container, className, {
+        [s.fluid]: fluid,
       })}
     >
       {children}
@@ -44,9 +44,9 @@ const Column = withMargin<GridColumnProps>(
     return (
       <div
         style={style}
-        className={classNames(styles.column, className, {
-          [styles[`_${cols}`]]: cols,
-          [styles.centered]: centered,
+        className={classNames(s.column, className, {
+          [s[`_${cols}`]]: cols,
+          [s.centered]: centered,
         })}
       >
         {children}

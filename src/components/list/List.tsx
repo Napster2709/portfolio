@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.scss';
+import s from './styles.scss';
 import cn from 'classnames';
 
 interface ListProps {
@@ -14,7 +14,7 @@ interface ListItemProps {
 }
 
 const List = ({ children, className }: ListProps): React.ReactElement => {
-  return <ul className={cn(className, styles.list)}>{children}</ul>;
+  return <ul className={cn(className, s.list)}>{children}</ul>;
 };
 
 const Item = ({
@@ -25,8 +25,8 @@ const Item = ({
   return (
     <li
       onClick={onClick}
-      className={cn(styles.listItem, className, {
-        [styles.callForAction]: typeof onClick !== 'undefined',
+      className={cn(s.listItem, className, {
+        [s.callForAction]: typeof onClick !== 'undefined',
       })}
     >
       {children}

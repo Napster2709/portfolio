@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.scss';
+import s from './styles.scss';
 
 interface TimelineProps {
   children?: React.ReactNode;
@@ -12,7 +12,7 @@ interface TimelineItemProps {
 }
 
 const Timeline = ({ children }: TimelineProps): React.ReactElement => {
-  return <div className={styles.timeline}>{children}</div>;
+  return <div className={s.timeline}>{children}</div>;
 };
 
 const TimelineItem = ({
@@ -21,13 +21,13 @@ const TimelineItem = ({
   displayLine = true,
 }: TimelineItemProps): React.ReactElement => {
   return (
-    <div className={styles.row}>
-      <div className={styles.dot} />
-      {displayLine && <div className={styles.line} />}
-      <div className={styles.content}>
-        <div className={styles.bubble}>{children}</div>
+    <div className={s.row}>
+      <div className={s.dot} />
+      {displayLine && <div className={s.line} />}
+      <div className={s.content}>
+        <div className={s.bubble}>{children}</div>
       </div>
-      <div className={styles.date}>{date}</div>
+      <div className={s.date}>{date}</div>
     </div>
   );
 };

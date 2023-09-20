@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.scss';
+import s from './styles.scss';
 import cn from 'classnames';
 
 interface HugeProps {
@@ -17,8 +17,8 @@ const Huge: React.FC<HugeProps> = ({
 }: HugeProps) => {
   return (
     <div
-      className={cn(className, styles.hugeFont, {
-        [styles.callForAction]: onClick !== undefined,
+      className={cn(className, s.hugeFont, {
+        [s.callForAction]: onClick !== undefined,
       })}
       onAnimationEnd={onAnimationEnd}
       onClick={onClick}

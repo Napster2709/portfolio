@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './styles.scss';
+import s from './styles.scss';
 import cn from 'classnames';
 interface EnumerationProps {
   items: React.ReactNode[];
@@ -40,15 +40,11 @@ const Enumeration = ({
       : { transform: `translateY(-${height * iter}px)` };
 
   return (
-    <div className={styles.container}>
-      <div
-        className={cn(styles.itemBox, className)}
-        ref={itemRef}
-        style={style}
-      >
+    <div className={s.container}>
+      <div className={cn(s.itemBox, className)} ref={itemRef} style={style}>
         {items.map((item, index) => (
           <div
-            className={cn(styles.item, {
+            className={cn(s.item, {
               [activeClassName]: index === iter && iter !== 0,
             })}
             key={index}

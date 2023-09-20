@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.scss';
+import s from './styles.scss';
 import { SocialList } from 'components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright } from '@fortawesome/free-solid-svg-icons';
@@ -9,13 +9,13 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className={styles.footer}>
+    <div className={s.footer}>
       <SocialList />
-      <div className={styles.copyright}>
-        <div className={styles.link}>
+      <div className={s.copyright}>
+        <div className={s.link}>
           <Link to="/imprint">Imprint</Link>
         </div>
-        <div className={styles.text}>
+        <div className={s.text}>
           <FontAwesomeIcon icon={faCopyright} />
           <>Copyright </>
           <>{currentYear} Frederik von Kiedrowski</>

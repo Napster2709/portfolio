@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.scss';
+import s from './styles.scss';
 import cn from 'classnames';
 
 interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -10,7 +10,7 @@ const TextInput: React.FC<TextInputProps> = ({ inputRef, ...props }) => {
   return (
     <input
       ref={inputRef}
-      className={cn(props.className, styles.input)}
+      className={cn(props.className, s.input)}
       spellCheck={false}
       {...props}
     />

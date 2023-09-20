@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
-import styles from './styles.scss';
+import s from './styles.scss';
 
 interface PrivatTextProps {
   children?: string;
@@ -13,7 +13,7 @@ const PrivatText = ({
 }: PrivatTextProps): React.ReactElement => {
   return (
     <div
-      className={classNames(styles.text, { [styles[type]]: type })}
+      className={classNames(s.text, { [s[type]]: type })}
       data-text={children}
     ></div>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Logo } from '../logo';
-import styles from './styles.scss';
+import s from './styles.scss';
 import cn from 'classnames';
 import { ColorThemeToggle, Grid } from 'components';
 import { Link } from 'react-router-dom';
@@ -12,18 +12,18 @@ interface HeaderProps {
 const Header = ({ logo }: HeaderProps): React.ReactElement => {
   return (
     <>
-      <div className={cn(styles.header, styles.fadeIn)}>
-        <Grid className={styles.content}>
+      <div className={cn(s.header, s.fadeIn)}>
+        <Grid className={s.content}>
           {logo && (
             <Grid.Column centered>
               <Link to="/">
-                <Logo className={styles.logo} />
+                <Logo className={s.logo} />
               </Link>
             </Grid.Column>
           )}
         </Grid>
       </div>
-      <div className={styles.toggle}>
+      <div className={s.toggle}>
         <ColorThemeToggle />
       </div>
     </>

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.scss';
+import s from './styles.scss';
 import {
   Enumeration,
   Grid,
@@ -29,65 +29,56 @@ const Main = ({ className }: MainProps): React.ReactElement => {
   return (
     <>
       <Header />
-      <div className={styles.main}>
-        <Section className={cn(className, styles.height100)}>
-          <Grid className={cn(styles.content)}>
-            <Grid.Column className={styles.titleContainer}>
-              <div className={styles.titleSection}>
-                <Logo className={cn(styles.logo)} />
-                <Line svg className={cn(styles.line)} />
-                <div className={cn(styles.titleText, styles.slideRight)}>
-                  <div className={styles.meta}>Hey,</div>
-                  <Huge className={styles.title}>I&lsquo;m Freddy</Huge>
+      <div className={s.main}>
+        <Section className={cn(className, s.height100)}>
+          <Grid className={cn(s.content)}>
+            <Grid.Column className={s.titleContainer}>
+              <div className={s.titleSection}>
+                <Logo className={cn(s.logo)} />
+                <Line svg className={cn(s.line)} />
+                <div className={cn(s.titleText, s.slideRight)}>
+                  <div className={s.meta}>Hey,</div>
+                  <Huge className={s.title}>I&lsquo;m Freddy</Huge>
                 </div>
               </div>
-              <div className={cn(styles.passion, styles.slideUp)}>
-                <div className={styles.text}>I&apos;m passionate about</div>
+              <div className={cn(s.passion, s.slideUp)}>
+                <div className={s.text}>I&apos;m passionate about</div>
                 <Enumeration
-                  className={styles.list}
-                  activeClassName={styles.active}
+                  className={s.list}
+                  activeClassName={s.active}
                   items={[
                     <>
-                      <div className={styles.itemText}>Design</div>{' '}
+                      <div className={s.itemText}>Design</div>{' '}
                       <FontAwesomeIcon
-                        className={styles.icon}
+                        className={s.icon}
                         icon={faCompassDrafting}
                       />{' '}
                     </>,
                     <>
-                      <div className={styles.itemText}>Clean Code</div>{' '}
-                      <FontAwesomeIcon
-                        className={styles.icon}
-                        icon={faCodeMerge}
-                      />
+                      <div className={s.itemText}>Clean Code</div>{' '}
+                      <FontAwesomeIcon className={s.icon} icon={faCodeMerge} />
                     </>,
                     <>
-                      <div className={styles.itemText}>Modern languages</div>{' '}
-                      <FontAwesomeIcon className={styles.icon} icon={faCode} />
+                      <div className={s.itemText}>Modern languages</div>{' '}
+                      <FontAwesomeIcon className={s.icon} icon={faCode} />
                     </>,
                     <>
-                      <div className={styles.itemText}>coffee</div>{' '}
-                      <FontAwesomeIcon
-                        className={styles.icon}
-                        icon={faMugSaucer}
-                      />
+                      <div className={s.itemText}>coffee</div>{' '}
+                      <FontAwesomeIcon className={s.icon} icon={faMugSaucer} />
                     </>,
                     <>
-                      <div className={styles.itemText}>Gaming</div>{' '}
-                      <FontAwesomeIcon
-                        className={styles.icon}
-                        icon={faChessRook}
-                      />
+                      <div className={s.itemText}>Gaming</div>{' '}
+                      <FontAwesomeIcon className={s.icon} icon={faChessRook} />
                     </>,
                     <>
-                      <div className={styles.itemText}>Music</div>{' '}
-                      <FontAwesomeIcon className={styles.icon} icon={faMusic} />
+                      <div className={s.itemText}>Music</div>{' '}
+                      <FontAwesomeIcon className={s.icon} icon={faMusic} />
                     </>,
                   ]}
                 />
               </div>
               <Grid.Column
-                className={styles.slideDown}
+                className={s.slideDown}
                 marginBottom="2rem"
                 marginTop="8rem"
               >

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.scss';
+import s from './styles.scss';
 import cn from 'classnames';
 
 interface LineProps {
@@ -17,15 +17,15 @@ const Line: React.FC<LineProps> = ({
 }) => {
   return (
     <div
-      className={cn(className, styles.container, {
-        [styles[align as string]]: align,
-        [styles.vertical]: vertical,
+      className={cn(className, s.container, {
+        [s[align as string]]: align,
+        [s.vertical]: vertical,
       })}
     >
-      {!svg && <div className={styles.line} />}
+      {!svg && <div className={s.line} />}
       {svg && (
         <svg
-          className={styles.svgLine}
+          className={s.svgLine}
           // xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 60 258"
           fill="none"

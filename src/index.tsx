@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Components, PageNotFound, Main, Imprint } from './pages';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import styles from 'styles/app.scss';
+import s from 'styles/app.scss';
 import './theme/global';
 import 'assets/favicon.ico';
 import { detectColorScheme } from 'utils';
@@ -16,7 +16,7 @@ const App = ({ children }: AppProps): React.ReactElement => {
   detectColorScheme({});
 
   return (
-    <div className={styles.app}>
+    <div className={s.app}>
       {children}
       <Footer />
     </div>

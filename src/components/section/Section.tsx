@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.scss';
+import s from './styles.scss';
 import cn from 'classnames';
 import { withMargin } from 'utils';
 
@@ -20,8 +20,8 @@ const Section = withMargin<SectionProps>(
     return (
       <div
         style={style}
-        className={cn(styles.section, className, {
-          [styles.fullWidth]: fullWidth,
+        className={cn(s.section, className, {
+          [s.fullWidth]: fullWidth,
         })}
       >
         {children}

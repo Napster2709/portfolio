@@ -8,13 +8,13 @@ import {
   Timeline,
 } from 'components';
 import React from 'react';
-import styles from './styles.scss';
+import s from './styles.scss';
 
 const Components = (): React.ReactElement => {
   return (
     <>
       <Header logo />
-      <div className={styles.main}>
+      <div className={s.main}>
         <Grid>
           <Grid.Column cols={6} marginBottom="4rem">
             <Huge>Togographie</Huge>
@@ -51,33 +51,33 @@ const Components = (): React.ReactElement => {
           <Grid.Column cols={6} marginBottom="4rem">
             <Huge>Colors</Huge>
           </Grid.Column>
-          <Grid.Column cols={6} className={styles.wrapper} marginBottom="4rem">
+          <Grid.Column cols={6} className={s.wrapper} marginBottom="4rem">
             <div>
-              $black: <div className={styles.black}></div>
+              $black: <div className={s.black}></div>
             </div>
             <div>
-              $dark: <div className={styles.dark}></div>
+              $dark: <div className={s.dark}></div>
             </div>
             <div>
-              $lightdark: <div className={styles.lightdark}></div>
+              $lightdark: <div className={s.lightdark}></div>
             </div>
             <div>
-              $lightwhite: <div className={styles.lightwhite}></div>
+              $lightwhite: <div className={s.lightwhite}></div>
             </div>
             <div>
-              $white: <div className={styles.white}></div>
+              $white: <div className={s.white}></div>
             </div>
             <div>
-              $red: <div className={styles.red}></div>
+              $red: <div className={s.red}></div>
             </div>
             <div>
-              $blue: <div className={styles.blue}></div>
+              $blue: <div className={s.blue}></div>
             </div>
             <div>
-              $success: <div className={styles.success}></div>
+              $success: <div className={s.success}></div>
             </div>
             <div>
-              $error: <div className={styles.error}></div>
+              $error: <div className={s.error}></div>
             </div>
           </Grid.Column>
           <Grid.Column cols={6} marginBottom="4rem">
