@@ -21,16 +21,12 @@ import {
   faCode,
 } from '@fortawesome/free-solid-svg-icons';
 
-interface MainProps {
-  className?: string;
-}
-
-const Main = ({ className }: MainProps): React.ReactElement => {
+const Main = (): React.ReactElement => {
   return (
     <>
       <Header />
       <div className={s.main}>
-        <Section className={cn(className, s.height100)}>
+        <Section>
           <Grid className={cn(s.content)}>
             <Grid.Column className={s.titleContainer}>
               <div className={s.titleSection}>
@@ -90,6 +86,9 @@ const Main = ({ className }: MainProps): React.ReactElement => {
               </Grid.Column>
             </Grid.Column>
           </Grid>
+        </Section>
+        <Section>
+          <p>Test</p>
         </Section>
       </div>
     </>

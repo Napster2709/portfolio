@@ -2,6 +2,7 @@
 
 .section {
   display: grid;
+  min-height: 90vh;
   grid-template-columns: 1fr minmax(auto, 1920px) 1fr;
 
   & > * {
